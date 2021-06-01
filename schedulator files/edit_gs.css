@@ -1,0 +1,73 @@
+#editor table.schedule {
+    
+}
+#editor .schedule th, #editor .schedule td{
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+#editor input {
+    font-size: 1rem;
+    margin: 10px 2px;
+    width: 96%;
+}
+
+#editor input.abbr {
+    width: 3em;
+    text-align: center;
+}
+
+#editor .schedule tr {
+    min-height: 3rem;
+}
+
+#editor table.schedule td:nth-child(1) {
+    width: 2.5em;
+    background: none;
+}
+#editor table.schedule td:nth-child(2) {
+    width: 9em;
+}
+#editor table.schedule td:nth-child(3) {
+    width: 9em;
+}
+#editor table.schedule td:nth-child(4) {
+    width: 3.75em;
+}
+#editor table.schedule td:nth-child(5) {
+    width: 3.75em;
+}
+#editor table.schedule td:nth-child(6) {
+    min-width: 12.5em;
+}
+#editor table.schedule td:last-child {
+    width: 3em;
+    background:none;
+}
+#editor table.schedule.edit_blocks tr:first-child td {
+    opacity: 0;
+}
+#editor table.schedule.edit_blocks tr:nth-child(2) td:nth-child(n+2):nth-child(-n+3) {
+    background:#000;
+    color:#ddd;
+    border: 1.5px solid transparent;
+}
+
+button.arrow {
+    font-size: 1em;
+    padding: 2px;
+    border-radius: 0.3rem;
+    width: 8em;
+    margin: 4px;
+}
+
+button.arrow svg {
+    display: inline-block;
+    float: right;
+    height: 1em;
+    margin-right: .3rem;
+}
+
+button.arrow div {
+    display: inline-block;
+}

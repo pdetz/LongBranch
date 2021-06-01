@@ -1,0 +1,66 @@
+table.lineup { 
+    padding: 0; 
+    margin: 0; 
+    background: none; 
+    border:none; 
+    width:100%;
+    position:relative; 
+    border-collapse: collapse; 
+    border-spacing:0;
+}
+
+table.lineup td {
+    padding: 0; 
+    margin:0; 
+    border:1px solid white; 
+    border-collapse: collapse; 
+    vertical-align: center; 
+    background:none;
+    color: #000;
+}
+
+.lineup:hover{ 
+    background:#00b; 
+    color:#aff; 
+}
+
+.lineup:active{ 
+    background:#00f; 
+    color:#fff; 
+}
+
+.lineup svg { 
+    height:12pt; 
+    width:12pt 
+}
+
+.absent{
+    font-style: italic;
+    color:#aaa;
+}
+
+table.lineup tr:nth-child(odd) {background:#def}
+table.lineup tr:nth-child(1) {background:#6af}
+
+
+.noswim svg {fill:#000; }
+
+.noswim:hover svg {fill:#57f; }
+
+.noswim:active svg {fill:#00b;}
+
+.swim svg {fill:#aff; opacity:0; }
+
+.swim:hover svg {fill:#aff; opacity:1; }
+
+.swim:active svg {fill:#fff; opacity:1; }
+
+.swimmer-title svg {height:30px; width:30px; transform:translateY(6px)}
+
+html .psych tr:nth-child(3) {background:#8af}
+html .psych tr:nth-child(4) {background:#f88}
+html .psych tr:nth-child(5) {background:#fff}
+html .psych tr:nth-child(6) {background:#ff0}
+html .psych tr:nth-child(7) {background:#fce}
+
+html .toptimes tr:nth-child(6n) {background:#ff0}

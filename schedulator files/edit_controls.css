@@ -1,0 +1,127 @@
+/* .inv buttons, grey with no background, hover -> colors*/
+button.inv{
+    width: min-content;
+    /*display: inline-block;*/
+    background: none;
+    line-height: 1.0em;
+    border-radius: 0.3rem;
+}
+
+button.inv svg{
+    fill: #aaa;
+    width: 1.5rem;
+
+}
+
+button.inv.sel:hover svg {
+    fill: #000;
+}
+
+button.inv.delete:hover svg {fill: #f44;}
+
+
+div.alts {
+    display:table-cell;
+    border-radius: 0.3em;
+    width: 37rem;
+    height: 3em;
+    vertical-align: middle;
+}
+div.alts_button {
+    display:table-cell;
+    vertical-align: middle;
+    width: 2rem;
+}
+
+div.alts.add {background:#8cf;}
+button.inv.add:hover {background: #8cf}
+button.inv.add:hover svg{fill: #48f;}
+
+
+/* .CTRL buttons, 100% width, for toggling other controls*/
+
+button.ctrl {
+    border-radius: .3em;
+    margin: 3px 1px;
+    padding-top: 0.2em;
+    background: #efefef;
+    width:calc(100% - 2px);
+    color: #aaa;
+}
+
+button.ctrl svg{
+    fill: #aaa;
+    width: 1.5em;
+    transform: translate(0, -0.1em);
+}
+
+button.ctrl.add {background: #8cf; color:#000}
+button.ctrl.add svg {fill:#000;}
+button.ctrl.add:hover{background: #48f; color: #fff;}
+button.ctrl.add:hover svg{ fill: #8cf;}
+
+button.ctrl.reorder {width:calc(50% - 2px); display:none}
+button.ctrl.reorder:hover{background: #ff4; color: #000;}
+button.ctrl.reorder:hover svg{ fill: #000;}
+button.ctrl.reorder.on{background: #ff4; color: #000;}
+button.ctrl.reorder.on svg{ fill: #000;}
+
+button.ctrl.delete {width:calc(100% - 2px);}
+button.ctrl.delete:hover{background: #f44; color: #fff;}
+button.ctrl.delete:hover svg{ fill: #fcc;}
+button.ctrl.delete.on{background: #f44; color: #fff;}
+button.ctrl.delete.on svg{ fill: #fcc;}
+
+#editor div.ctrl {
+    height: 3em;
+    width: 3em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+hr.black {
+    border:1px solid #000;
+}
+
+.edit_blocks td {
+    text-align: center;
+}
+
+div.alt_block {
+    display: inline-block;
+    border-radius: .3rem;
+    margin: 4px 12px;
+    padding: 2px 6px;
+    background: #eee;
+}
+
+div.alt_block button {
+    display: inline-block;
+    margin-bottom: .1rem;
+    margin-left: 2px;
+}
+
+#editor div.alt_block input.edit_blocks {
+    margin: 4px 2px;
+}
+
+#editor input.edit_blocks {
+    width: 3.2rem;
+}
+
+div.alt_block.delete {
+    background: #fcc;
+}
+
+td.delete {
+    background-color: #fcc;
+    border-color: #fcc;
+}
+
+button.schedule.delete {
+      background: #fcc;
+}
+
+.grade.schedule td.grades_to_remove {
+    width: 3em;
+}

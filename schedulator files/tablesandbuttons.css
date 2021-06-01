@@ -1,0 +1,93 @@
+.schedule tr:first-child td, th {
+    background:#000;
+    color:#ddd;
+    border: 1.5px solid transparent;
+}
+
+.schedule th, .schedule td {
+    position: relative;
+    font-size: 0.875rem;
+    text-align:center;
+    padding: 0;
+}
+
+.grade.schedule td {
+    width: 7rem;
+    padding: 0;
+    margin:0;
+}
+
+.grade.schedule th:first-child, td:first-child {
+    text-align:left;
+    padding-left: 2px;
+    width: 9rem;
+}
+
+.special.schedule td {
+    text-align: center;
+    width:8.5rem;
+    padding: 0;
+}
+
+button.schedule {
+    position: relative;
+    display:inline-block;
+    z-index: 0;
+    margin: 0.75px;
+    padding: 1px;
+    width: calc(100% - 1.5px);
+    height: 100%;
+    border: none;
+    border-radius: .2em;
+    transition: filter .4s;
+    font-size: 1em;
+}
+
+.selected button {
+    background: #000;
+    color: #fff;
+}
+
+.topbar_button {
+    font-size: 1.2em;
+    min-height: 1.2em;
+    padding: 0;
+    margin: 1px;
+    border: none;
+    border-radius: .3em;
+    transition: .4s;
+    vertical-align: bottom;
+}
+
+.topbar_button.to_left {
+    transform: translateX(-800px);
+    filter: brightness(0);
+}
+
+.topbar_button.specials {
+    width: 2em;
+}
+
+.topbar_button.grade {
+    width: 4em;
+}
+
+div.specials {
+    font-size: 1.2em;
+    padding-bottom: 1rem;
+}
+
+.ulbold {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.count {
+    display: inline;
+}
+
+.teacher_name {
+    background:none;
+    border:none;
+    width: 100%;
+}
