@@ -54,12 +54,11 @@ function make(el) {
 
         $el.attr("id", id).attr("class", css);
     }
+    if (arguments.length == 1) {
+        $el.data("ref") = arguments[0];
+    }
 
     return $el;
-}
-
-$.fn.obj = function(){
-    return $(this).closest("tr").data("obj");
 }
 
 $.fn.c = function() {
