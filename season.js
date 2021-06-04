@@ -17,7 +17,7 @@ function AgeGroup(){
     this.
 }
 
-function Meet(){
+function Meet(events, entries, pool, address, date, time){
     this.events = events; // array of Events
     this.entries = entries; // array of Entries
     this.pool = pool;
@@ -27,14 +27,16 @@ function Meet(){
 }
 
 function Event(){
-    this.number = number;
+    this.n = n;
     this.gender = gender;
     this.ageGroup = ageGroup;
     this.distance = distance;
     this.stroke = stroke;
+    this.edit = make()
 }
 
 function Entries(){
     this.event = event;
     this.swimmer = swimmer;
 }
+
