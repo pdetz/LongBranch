@@ -1,12 +1,86 @@
 $(document).ready(function(){
-    console.log("yeah buddy");
+ 
+    let season = new Season(LBWW21);
+   
+    loadMenu(season);
+    load(season);
 
+    attachClickHandlers();
+    attachKeyHandlers();
+
+});
+
+function tempseason() {
+    let season = new Season(LBWW, [], [EVENTS], 0);
+    let meetNames = ["1A", "1B", "2A", "2B", "3A", "3B", "4A", "4B", "5A", "5B", "DIV"]
+    meetNames.forEach(meet => {
+        season.meets.push(new Meet(meet, 0, "Long Branch", "8700 Piney Branch Rd", "", "8:00 AM"));
+    });
+
+    //console.log(JSON.stringify(season));
+
+    return season;
+}
+
+function loadMenu(season){
+    let menuButtons = make("div")
+        .addMenuButton(DOWNLOAD, "Download", "download", function(){
+            saveText(JSON.stringify(saveSeason(season)), "lbww2021.json");
+        })
+        .addMenuButton(PRINT, "Print", "print", window.print);
+    $("#rightbar").append(menuButtons);
+}
+
+$.fn.addMenuButton = function(svg, label, id, clickHandler){
+    let button = make("button#" + id + ".menu");
+    button.append(svg)
+          .data("onclick", clickHandler);
+    $(this).append(button);
+    return $(this);
+}
+
+function saveText(text, filename){
+    var a = document.createElement('a');
+    a.setAttribute('href', 'data:text/plain;charset=utf-8,'+encodeURIComponent(text));
+    a.setAttribute('download', filename);
+    a.click();
+}
+
+function load(season) {
+    season.loadTables();
+    season.loadButtons();
+    season.loadDropDowns();
+}
+
+function attachClickHandlers(){
+    let body = $("#body");
+    body.on("click", "button.menu", function(e){
+        e.stopImmediatePropagation();
+        $(this).data("onclick").call();
+    });
+    body.on("click", "button.meet", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        if (!button.hasClass("sel")){
+            let meet = button.data("meet");
+            $("#left").html(meet.lineup);
+            $("button.sel").removeClass("sel");
+            button.toggleClass("sel");
+        };
+    });
+}
+
+function attachKeyHandlers(){
     let right = $("#right");
+    right.on("keyup", "input.var", function(e){
+        let input = $(this);
+        //input.data("obj")[input.data("prop")] = input.val();
+        input.setVar(input.val());
+    });
+}
 
-    let fileInput = $('<input type="file" id="upload" accept=".hy3"></input>');
-
-    right.html("Long Branch 2021").append(fileInput, "<hr>");
-
+function loadHY3(fileInput){
+    let roster = [];
     fileInput.change(function(){
         let file = fileInput.get(0).files[0];
         let reader = new FileReader();
@@ -14,8 +88,6 @@ $(document).ready(function(){
             let uploadedFile = reader.result;
 
             let athletes = uploadedFile.split("\nD1");
-            console.log(athletes);
-
             athletes.slice(1).forEach(athlete =>{
 
                 let lines = athlete.split("\n");
@@ -26,23 +98,23 @@ $(document).ready(function(){
                 let nickname = athleteInfo.slice(46, 66).trim();
                 let id = athleteInfo.slice(66, 86).trim();
                 let dob = athleteInfo.slice(86, 94).trim();
-                let age = athleteInfo.slice(95, 97).trim();
-                let address = lines[1].slice(2, 62) + "<br>" + lines[1].slice(62, 94) + " " + lines[1].slice(94, 99);
+                //let age = athleteInfo.slice(95, 97).trim();
+                let address = lines[1].slice(2, 62) + "/" + lines[1].slice(62, 94) + " " + lines[1].slice(94, 99);
 
+                roster.push(new Swimmer(nombre, apellido, nickname, gender, dob, id, address))
+
+                /*
                 right.append(apellido, ", ", nombre, " (", nickname, ")<br>");
                 right.append("Gender: ", gender, "<br>");
                 right.append("ID: ", id, "<br>");
                 right.append("DOB, age: ", dob, ", ", age, "<br>");
                 right.append("Address: ", address);
-
-                lines.forEach(line => {
-                    //$("#right").append(detail, "<br>");
-                });
-
-                right.append("<hr>");
+*/
             });
+            $("#right").append(JSON.stringify(roster));
 
         };
         reader.readAsText(file);
     });
-});
+    return roster;
+}

@@ -60,7 +60,7 @@ body{
 }
 
 .displayArea {
-    max-width: 46rem;
+    max-width: 770px;
     direction: ltr;
     margin-left: 1.5rem;
     margin-right: 0.5rem;
@@ -86,10 +86,10 @@ body{
 
 .frame {
     padding: 1rem;
-    background: #ddd;
+    background: #fff;
     min-height: 3em;
     color: #000;
-    max-width: 46rem;
+    max-width: 770px;
 }
 
 .square {

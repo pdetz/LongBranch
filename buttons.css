@@ -1,0 +1,40 @@
+button.tools {
+    min-width: 50px;
+    border:none;
+}
+
+button.tools:hover {
+    color:#fff;
+    background-color: #000;
+}
+
+button.menu{
+    border-radius: 0.3em;
+    background: none;
+    margin: 2pt;
+}
+
+button.menu svg {
+    fill:#fff;
+    width: 24pt;
+}
+
+button.menu:hover svg {
+    fill: #6af;
+}
+
+button.meet {
+    min-width: 40pt;
+    font-size: 14pt;
+    margin: 0 4px;
+    border-radius: 0.3em;
+    background: #fff;
+}
+
+button.meet:hover {
+    background: #8cf;
+}
+
+button.meet.sel {
+    background: #6af;
+}
