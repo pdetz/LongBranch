@@ -1,4 +1,4 @@
-function Meet(meet){
+function Meet(meet, meetTypes){
     this.name = meet.name;
     this.events = meet.events;
 
@@ -7,33 +7,33 @@ function Meet(meet){
     this.address = meet.address;
     this.date = meet.date;
     this.time = meet.time;
-    this.type = meet.type;
+    this.type = meetTypes[meet.type];
 
     this.lineup = make("div");
 }
 
-function SavedMeet(meet){
+function SavedMeet(meet, meetTypes){
     this.name = meet.name;
     this.entries = meet.entries; // array of Entries
     this.pool = meet.pool;
     this.address = meet.address;
     this.date = meet.date;
     this.time = meet.time;
-    this.type = meet.type;
+    this.type = meetTypes.indexOf(meet.type);
 }
 
-function Event(n, gender, ageGroup, distance, stroke){
-    this.n = n;
-    this.gender = gender;
-    this.ageGroup = AGE_GROUPS[ageGroup];
-    this.distance = distance;
-    this.stroke = STROKES[stroke];
-}
-
-function SavedEvent(e){
+function Event(e, ageGroups){
     this.n = e.n;
     this.gender = e.gender;
-    this.ageGroup = AGE_GROUPS.indexOf(e.ageGroup);
+    this.ageGroup = ageGroups[e.ageGroup];
+    this.distance = e.distance;
+    this.stroke = STROKES[e.stroke];
+}
+
+function SavedEvent(e, ageGroups){
+    this.n = e.n;
+    this.gender = e.gender;
+    this.ageGroup = ageGroups.indexOf(e.ageGroup);
     this.distance = e.distance;
     this.stroke = STROKES.indexOf(e.stroke);
 }

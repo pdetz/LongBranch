@@ -22,7 +22,7 @@ Season.prototype.loadTables = function(){
 Season.prototype.lineupTable = function(ag, gender, meet){
     let swimmers = [];
     let season = this;
-    let meetType = season.meetTypes[meet.type];
+    let meetType = meet.type;
     let events = meetType.events;
     let ageGroup = meetType.ageGroups[ag];
     let eventNumbers = [];
@@ -46,9 +46,9 @@ Season.prototype.lineupTable = function(ag, gender, meet){
     let eventNumbersRow = make("tr").append(make("td.events").html("Event #s -- Please learn"));
     for (let i = 0; i < 5; i++){
         let td = make("td.events");
-       // let stroke = STROKES[i];
+        let stroke = STROKES[i];
         events.forEach(e=>{
-            if (e.stroke == i && e.gender == gender && ageMatch(meetType.ageGroups, ag, e.ageGroup)){
+            if (e.stroke == stroke && e.gender == gender && ageMatch(ageGroup, e.ageGroup)){
                 td.html(e.n);
                 eventNumbers.push(events.indexOf(e));
             }
@@ -79,11 +79,11 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
     return tr;
 }
 
-function ageMatch(ageGroups, a, b){
+function ageMatch(a, b){
     let match = true;
     if (a != b){
-        ageGroups[a].ages.forEach(age =>{
-            match = ageGroups[b].ages.includes(age);
+        a.ages.forEach(age =>{
+            match = b.ages.includes(age);
         });
     }
     return match;

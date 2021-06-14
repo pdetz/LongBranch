@@ -8,6 +8,8 @@ $(document).ready(function(){
     attachClickHandlers();
     attachKeyHandlers();
 
+    arrayTest();
+
 });
 
 function tempseason() {
