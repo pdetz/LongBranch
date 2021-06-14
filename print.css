@@ -41,9 +41,9 @@
         color:#fff;
     }
     
-    .schedule th, td {
+    .lineup th, td {
         position: relative;
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         border: 1px solid #fff;
         width:8.5rem;
         text-align:center;
@@ -62,7 +62,7 @@
         line-height: 1.2em;
     }
 
-    div.grade_schedule, div.special_schedule {
+    div.lineup {
         page-break-inside: avoid;
         margin-bottom: 1em;
     }

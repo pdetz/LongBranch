@@ -115,7 +115,9 @@ body{
 
 button {
     border: none;
+    background: none;
     padding: 0;
+    margin:none;
     vertical-align: middle;
     font-size: 1em;
     cursor: pointer;

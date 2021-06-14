@@ -1,82 +1,52 @@
 function Season(season){
-    this.roster = season.roster; // array of Swimmers
+    this.roster = []; // array of Swimmers
+
+    season.roster.forEach(swimmer =>{
+        this.roster.push(new Swimmer(swimmer));
+    })
+
     this.meets = []; // array of Meets
 
     season.meets.forEach(meet =>{
         this.meets.push(new Meet(meet));
     });
 
-    this.meetTypes = season.meetTypes; // array of Meet Types
+    //this.meetTypes = season.meetTypes; // array of Meet Types
+    
+    this.meetTypes = [];
+
+    season.meetTypes.forEach(meetType =>{
+        this.meetTypes.push(new MeetType(meetType));
+    })
+    
     this.currentMeet = season.currentMeet;
 
-    this.ageGroups = AGE_GROUPS;
 }
 
-Season.prototype.loadTables = function(){
-    let season = this;
-    let tables = make("div.lineup");
+function SavedSeason(season){
+    this.roster = []; // array of Swimmers
+
+    season.roster.forEach(swimmer =>{
+        this.roster.push(new SavedSwimmer(swimmer));
+    })
+
+    this.meets = []; // array of Meets
 
     season.meets.forEach(meet =>{
-        meet.lineup.append(meet.name, "<br>");
-    
-        ["M", "F"].forEach(gender => {
-            let half = make("div.half");
-            for (i = 0; i < 5; i++){
-                half.append(lineupTable(season.ageGroups[i], gender, season.roster, meet));
-            }
-            meet.lineup.append(half);
-        });
-
-
+        this.meets.push(new SavedMeet(meet));
     });
 
-    $("#left").append(season.meets[season.currentMeet].lineup);
-}
+    this.meetTypes = [];
+    this.meetTypes.push(new MeetType);
 
-function lineupTable(ageGroup, gender, roster, meet){
-    let table = make("table.lineup");
-    let tbody = make("tbody");
-
-    tbody.append(
-        make("tr")
-        .append(make("td").html(ageGroup.name + " " + GENDERS[gender]))
-        .append(make("td").html("IM"))
-        .append(make("td").html("FR"))
-        .append(make("td").html("BK"))
-        .append(make("td").html("BR"))
-        .append(make("td").html("FL")));
-    return table.append(tbody);
-}
-
-Season.prototype.loadButtons = function(){
-    let season = this;
-    let buttons = make("div.topbar");
-
-    season.meets.forEach(meet =>{
-        buttons.append(make("button.meet").html(meet.name).data("meet", meet));
-    });
-
-    $("#leftbar").append(buttons);
-}
-
-Season.prototype.loadDropDowns = function(){
-    console.log("Dropdowns loaded");
-}
-
-Season.prototype.saveSeason = function(){
-    let season = this;
+    this.currentMeet = season.currentMeet;
     return season;
 }
 
-function Swimmer(nombre, apellido, nickname, gender, dob, id, address){
-    this.dob = dob;
-    //this.age = age;
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.nickname = nickname;
-    this.gender = gender;
-    this.id = id;
-    this.address = address;
+function MeetType(meetType){
+    this.name = meetType.name;
+    this.ageGroups = meetType.ageGroups;
+    this.events = meetType.events;
 }
 
 function AgeGroup(name, ages){

@@ -38,3 +38,29 @@ button.meet:hover {
 button.meet.sel {
     background: #6af;
 }
+
+button.bolt {
+    height:12pt;
+    width: 100%;
+}
+
+button.bolt svg {
+    display: none;
+}
+
+button.bolt:hover{ 
+    background:#00b; 
+    color:#aff; 
+}
+
+button.bolt:hover svg{
+    fill: #aff;
+}
+
+button.bolt:active{ 
+    background:#00f; 
+    color:#fff; 
+}
+button.bolt.entry svg{
+    display: inline;
+}

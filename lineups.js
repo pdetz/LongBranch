@@ -25,7 +25,7 @@ function tempseason() {
 function loadMenu(season){
     let menuButtons = make("div")
         .addMenuButton(DOWNLOAD, "Download", "download", function(){
-            saveText(JSON.stringify(saveSeason(season)), "lbww2021.json");
+            saveText("let LBWW21 = " + JSON.stringify(new SavedSeason(season)) + ";", "lbww2021.js");
         })
         .addMenuButton(PRINT, "Print", "print", window.print);
     $("#rightbar").append(menuButtons);
@@ -68,6 +68,22 @@ function attachClickHandlers(){
             button.toggleClass("sel");
         };
     });
+    body.on("click", "button.bolt", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        let swimmer = button.data("swimmer");
+        let meet = button.data("meet");
+        let eN = button.data("e");
+        button.toggleClass("entry");
+    });
+}
+
+function Input(obj, prop, size) {
+    let input = make("input.var").attr("size", size);
+    input.data("obj", obj).data("prop",prop);
+    input.val(input.data("obj")[input.data("prop")]);
+    this.input = input;
+    return this.input;
 }
 
 function attachKeyHandlers(){
