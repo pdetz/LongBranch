@@ -29,6 +29,10 @@ table.lineup td:nth-child(1){
     text-align: left;
 }
 
+table.roster.lineup td:nth-child(1){
+    width: inherit;
+}
+
 table.lineup td.events{
     font-style:italic;
 }

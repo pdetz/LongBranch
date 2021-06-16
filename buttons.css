@@ -50,7 +50,7 @@ button.bolt svg {
 
 button.bolt:hover{ 
     background:#00b; 
-    color:#aff; 
+    color:#aff;
 }
 
 button.bolt:hover svg{
@@ -59,7 +59,7 @@ button.bolt:hover svg{
 
 button.bolt:active{ 
     background:#00f; 
-    color:#fff; 
+    color:#fff;
 }
 button.bolt.entry svg{
     display: inline;

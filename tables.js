@@ -13,7 +13,6 @@ Season.prototype.loadTables = function(){
             });
             meet.lineup.append(tables);
         }
-
     });
 
     $("#left").append(season.meets[season.currentMeet].lineup);
@@ -22,9 +21,10 @@ Season.prototype.loadTables = function(){
 Season.prototype.lineupTable = function(ag, gender, meet){
     let swimmers = [];
     let season = this;
-    let meetType = meet.type;
-    let events = meetType.events;
-    let ageGroup = meetType.ageGroups[ag];
+
+    let events = meet.type.events;
+    let ageGroup = meet.type.ageGroups[ag];
+
     let eventNumbers = [];
     this.roster.forEach(swimmer =>{
         if(swimmer.gender == gender && swimmer.isAge(ageGroup)){
@@ -66,17 +66,26 @@ Season.prototype.lineupTable = function(ag, gender, meet){
 }
 
 Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
-    let tr = make("tr")  
+    let tr = make("tr" + swimmerRowID(swimmer, meet))  
         .append(make("td").html(swimmer.display()));
     for (let i = 0; i < 5; i++){
-        tr.append(make("td")
-            .append(make("button.bolt").html(BOLT)
-                .data("swimmer", swimmer)
-                .data("meet", meet)
-                .data("e", eventNumbers[i])
-        ));
+        let bolt = make("button.bolt").html(BOLT)
+            .data("swimmer", swimmer)
+            .data("meet", meet)
+            .data("e", eventNumbers[i]);
+        tr.append(make("td").append(bolt));
+        meet.entries.forEach(entry => {
+            if (entry.swimmer == swimmer && entry.e == meet.type.events[eventNumbers[i]]){
+                bolt.addClass("entry");
+                bolt.data("entry", entry);
+            }
+        });
     }
     return tr;
+}
+
+function swimmerRowID(swimmer, meet){
+    return "#" + meet.name + swimmer.id;
 }
 
 function ageMatch(a, b){

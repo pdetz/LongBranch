@@ -1,17 +1,20 @@
 function Season(season){
     this.roster = []; // array of Swimmers
+    
+    season.roster.sort(compareNames);
+
     season.roster.forEach(swimmer =>{
         this.roster.push(new Swimmer(swimmer));
-    })
+    });
         
     this.meetTypes = [];
     season.meetTypes.forEach(meetType =>{
         this.meetTypes.push(new MeetType(meetType));
-    })
+    });
 
     this.meets = []; // array of Meets
     season.meets.forEach(meet =>{
-        this.meets.push(new Meet(meet, this.meetTypes));
+        this.meets.push(new Meet(meet, this));
     });
 
     //this.meetTypes = season.meetTypes; // array of Meet Types
@@ -27,15 +30,18 @@ function SavedSeason(season){
     })
 
     this.meetTypes = [];
-    this.meetTypes.push(new SavedMeetType(season));
+    season.meetTypes.forEach(meetType => {
+        this.meetTypes.push(new SavedMeetType(meetType));
+    });
 
     this.meets = []; // array of Meets
     season.meets.forEach(meet =>{
-        this.meets.push(new SavedMeet(meet));
+        this.meets.push(new SavedMeet(meet, season));
+        console.log(this.meets);
     });
 
     this.currentMeet = season.currentMeet;
-    return season;
+    return this;
 }
 
 function MeetType(meetType){

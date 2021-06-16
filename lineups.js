@@ -5,11 +5,10 @@ $(document).ready(function(){
     loadMenu(season);
     load(season);
 
+    $("#right").append(season.viewRoster());
+
     attachClickHandlers();
     attachKeyHandlers();
-
-    arrayTest();
-
 });
 
 function tempseason() {
@@ -27,7 +26,9 @@ function tempseason() {
 function loadMenu(season){
     let menuButtons = make("div")
         .addMenuButton(DOWNLOAD, "Download", "download", function(){
-            saveText("let LBWW21 = " + JSON.stringify(new SavedSeason(season)) + ";", "lbww2021.js");
+            let newSeason = new SavedSeason(season);
+            console.log(newSeason);
+            saveText("let LBWW21 = " + JSON.stringify(newSeason) + ";", "lbww2021.js");
         })
         .addMenuButton(PRINT, "Print", "print", window.print);
     $("#rightbar").append(menuButtons);
@@ -65,7 +66,9 @@ function attachClickHandlers(){
         let button = $(this);
         if (!button.hasClass("sel")){
             let meet = button.data("meet");
-            $("#left").html(meet.lineup);
+            $("#left").children().hide();
+            $("#left").append(meet.lineup);
+            meet.lineup.show();
             $("button.sel").removeClass("sel");
             button.toggleClass("sel");
         };
@@ -76,6 +79,18 @@ function attachClickHandlers(){
         let swimmer = button.data("swimmer");
         let meet = button.data("meet");
         let eN = button.data("e");
+        console.log(swimmer, meet, eN);
+        if (button.hasClass("entry")){
+            console.log(button.data("entry"));
+            button.data("entry").removeEntry();
+            button.data("entry", "");
+        }
+        else {
+            let entry = newEntry(meet, eN, swimmer, "");
+            meet.entries.push(entry);
+            button.data("entry", entry);
+            console.log(meet.entries);
+        }
         button.toggleClass("entry");
     });
 }
