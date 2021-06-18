@@ -7,6 +7,10 @@ $(document).ready(function(){
 
     $("#right").append(season.viewRoster());
 
+    $.getJSON('lb.json', function(data) {
+        console.log(data);
+    });
+
     attachClickHandlers();
     attachKeyHandlers();
 });
