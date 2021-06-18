@@ -43,7 +43,7 @@ Season.prototype.lineupTable = function(ag, gender, meet){
         .append(make("td").html("BR"))
         .append(make("td").html("FL")));
 
-    let eventNumbersRow = make("tr").append(make("td.events").html("Event #s -- Please learn"));
+    let eventNumbersRow = make("tr").append(make("td.events").html("Event #s — Please learn"));
     for (let i = 0; i < 5; i++){
         let td = make("td.events");
         let stroke = STROKES[i];
