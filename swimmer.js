@@ -8,7 +8,7 @@ function Swimmer(swimmer){
     this.address = swimmer.address;
 
     //this.age = age;
-    this.age = age(this.dob, "06012021");
+    this.age = age(this.dob, "06012022");
     this.display = function(){
         let disp = this.apellido + ", ";
         if (this.nickname == ""){

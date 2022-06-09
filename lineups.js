@@ -1,6 +1,7 @@
 $(document).ready(function(){
  
     let season = new Season(LBWW21);
+
    
     loadMenu(season);
     load(season);
@@ -28,14 +29,22 @@ function tempseason() {
 }
 
 function loadMenu(season){
+    
+    let fileInput = $('<input type="file" id="upload" accept=".json,.JSON" style="display:none"></input>');
+
     let menuButtons = make("div")
+
         .addMenuButton(DOWNLOAD, "Download", "download", function(){
             let newSeason = new SavedSeason(season);
             console.log(newSeason);
-            saveText("let LBWW21 = " + JSON.stringify(newSeason) + ";", "lbww2021.js");
+            saveText("let LBWW22 = " + JSON.stringify(newSeason) + ";", "lbww2021.js");
         })
-        .addMenuButton(PRINT, "Print", "print", window.print);
-    $("#rightbar").append(menuButtons);
+        .addMenuButton(PRINT, "Print", "print", window.print)
+        .addMenuButton(UPLOAD, "Upload", "upload", function(){
+            console.log("lineups 44", this);
+            $("#upload").click();
+        });
+    $("#rightbar").append(menuButtons).append(fileInput);
 }
 
 $.fn.addMenuButton = function(svg, label, id, clickHandler){
@@ -118,6 +127,7 @@ function attachKeyHandlers(){
 
 function loadHY3(fileInput){
     let roster = [];
+console.log("yeah buddy");
     fileInput.change(function(){
         let file = fileInput.get(0).files[0];
         let reader = new FileReader();
@@ -148,10 +158,11 @@ function loadHY3(fileInput){
                 right.append("Address: ", address);
 */
             });
-            $("#right").append(JSON.stringify(roster));
+            //$("#right").append(JSON.stringify(roster));
 
         };
         reader.readAsText(file);
     });
+    console.log(roster);
     return roster;
 }
