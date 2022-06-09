@@ -2,20 +2,10 @@ $(document).ready(function(){
  
     let season = new Season(LBWW22);
 
-    
-    //clearSeasonEntries(season);
-
-
-    //console.log(season.meets[0].entries);
-
-
     loadMenu(season);
 
     load(season);
 
-
-//Clear season
-    
     $("#right").append(season.viewRoster());
 
     $.getJSON('lb.json', function(data) {
@@ -25,6 +15,51 @@ $(document).ready(function(){
     attachClickHandlers();
     attachKeyHandlers();
 });
+
+function loadHY3(fileInput, season){
+    let roster = [];
+    fileInput.change(function(){
+        let file = fileInput.get(0).files[0];
+        let reader = new FileReader();
+        reader.onload = function(){
+            let uploadedFile = reader.result;
+
+            let athletes = uploadedFile.split("\nD1");
+            //console.log(athletes);
+            athletes.slice(1).forEach(athlete =>{
+
+                let lines = athlete.split("\n");
+                let athleteInfo = lines[0];
+
+                const swimmer = {
+                    gender : athleteInfo.slice(0, 1),
+                    apellido : athleteInfo.slice(6, 26).trim(),
+                    nombre : athleteInfo.slice(26, 46).trim(),
+                    nickname : athleteInfo.slice(46, 66).trim(),
+                    id : athleteInfo.slice(66, 86).trim(),
+                    dob : athleteInfo.slice(86, 94).trim(),
+                    address : lines[1].slice(2, 62) + "/" + lines[1].slice(62, 94) + " " + lines[1].slice(94, 99)
+                };
+
+                roster.push(new Swimmer(swimmer));
+
+            });    
+            season.roster = roster;
+            console.log(season.roster);
+
+            $("table.roster").remove();
+
+            season.meets.forEach(meet =>{
+                meet.lineup.append("testing");
+                meet.lineup.empty();
+            });
+            //$(".meet_lineup").remove();
+            season.loadTables();
+        };
+        reader.readAsText(file);
+        
+    });
+}
 
 function clearSeasonEntries(season){
     season.meets.forEach(meet =>{
@@ -63,7 +98,7 @@ function loadMenu(season){
             $("#upload").click();
         });
     $("#rightbar").append(menuButtons).append(fileInput);
-    loadHY3(fileInput);
+    loadHY3(fileInput, season);
 }
 
 $.fn.addMenuButton = function(svg, label, id, clickHandler){
@@ -143,46 +178,4 @@ function attachKeyHandlers(){
         //input.data("obj")[input.data("prop")] = input.val();
         input.setVar(input.val());
     });
-}
-
-function loadHY3(fileInput){
-    let roster = [];
-console.log("yeah buddy");
-    fileInput.change(function(){
-        let file = fileInput.get(0).files[0];
-        let reader = new FileReader();
-        reader.onload = function(){
-            let uploadedFile = reader.result;
-
-            let athletes = uploadedFile.split("\nD1");
-            athletes.slice(1).forEach(athlete =>{
-
-                let lines = athlete.split("\n");
-                let athleteInfo = lines[0];
-                let gender = athleteInfo.slice(0, 1);
-                let apellido = athleteInfo.slice(6, 26).trim();
-                let nombre = athleteInfo.slice(26, 46).trim();
-                let nickname = athleteInfo.slice(46, 66).trim();
-                let id = athleteInfo.slice(66, 86).trim();
-                let dob = athleteInfo.slice(86, 94).trim();
-                //let age = athleteInfo.slice(95, 97).trim();
-                let address = lines[1].slice(2, 62) + "/" + lines[1].slice(62, 94) + " " + lines[1].slice(94, 99);
-
-                roster.push(new Swimmer(nombre, apellido, nickname, gender, dob, id, address))
-
-                /*
-                right.append(apellido, ", ", nombre, " (", nickname, ")<br>");
-                right.append("Gender: ", gender, "<br>");
-                right.append("ID: ", id, "<br>");
-                right.append("DOB, age: ", dob, ", ", age, "<br>");
-                right.append("Address: ", address);
-*/
-            });
-            //$("#right").append(JSON.stringify(roster));
-
-        };
-        reader.readAsText(file);
-    });
-    console.log(roster);
-    return roster;
 }

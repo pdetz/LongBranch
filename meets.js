@@ -14,7 +14,7 @@ function Meet(meet, season){
     this.date = meet.date;
     this.time = meet.time;
 
-    this.lineup = make("div");
+    this.lineup = make("div.meet_lineup");
 }
 
 function SavedMeet(meet, season){
