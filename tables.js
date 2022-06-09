@@ -4,7 +4,7 @@ Season.prototype.loadTables = function(){
     season.meets.forEach(meet =>{
         meet.lineup.append(meet.name, "<br>");
     
-        for (let i = 0; i < 6; i++){
+        for (let i = 0; i < 5; i++){
             let tables = make("div.lineup");
             ["M", "F"].forEach(gender => {
                 let half = make("div.half");
@@ -23,7 +23,10 @@ Season.prototype.lineupTable = function(ag, gender, meet){
     let season = this;
 
     let events = meet.type.events;
+    //console.log(events);
     let ageGroup = meet.type.ageGroups[ag];
+    //console.log(meet.type);
+    //console.log(ageGroup);
 
     let eventNumbers = [];
     this.roster.forEach(swimmer =>{
@@ -47,7 +50,9 @@ Season.prototype.lineupTable = function(ag, gender, meet){
     for (let i = 0; i < 5; i++){
         let td = make("td.events");
         let stroke = STROKES[i];
+        //td.html(ag);
         events.forEach(e=>{
+            //console.log(e);
             if (e.stroke == stroke && e.gender == gender && ageMatch(ageGroup, e.ageGroup)){
                 td.html(e.n);
                 eventNumbers.push(events.indexOf(e));

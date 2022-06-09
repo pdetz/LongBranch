@@ -1,11 +1,21 @@
 $(document).ready(function(){
  
-    let season = new Season(LBWW21);
+    let season = new Season(LBWW22);
 
-   
+    
+    //clearSeasonEntries(season);
+
+
+    //console.log(season.meets[0].entries);
+
+
     loadMenu(season);
+
     load(season);
 
+
+//Clear season
+    
     $("#right").append(season.viewRoster());
 
     $.getJSON('lb.json', function(data) {
@@ -15,6 +25,14 @@ $(document).ready(function(){
     attachClickHandlers();
     attachKeyHandlers();
 });
+
+function clearSeasonEntries(season){
+    season.meets.forEach(meet =>{
+        console.log(meet.name);
+        meet.entries = [];
+    });
+
+}
 
 function tempseason() {
     let season = new Season(LBWW, [], [EVENTS], 0);
@@ -30,21 +48,22 @@ function tempseason() {
 
 function loadMenu(season){
     
-    let fileInput = $('<input type="file" id="upload" accept=".json,.JSON" style="display:none"></input>');
+    let fileInput = $('<input type="file" id="upload" accept=".hy3,.HY3" style="display:none"></input>');
 
     let menuButtons = make("div")
 
-        .addMenuButton(DOWNLOAD, "Download", "download", function(){
+        .addMenuButton(DOWNLOAD, "Download", "download_button", function(){
             let newSeason = new SavedSeason(season);
             console.log(newSeason);
-            saveText("let LBWW22 = " + JSON.stringify(newSeason) + ";", "lbww2021.js");
+            saveText("let LBWW22 = " + JSON.stringify(newSeason) + ";", "lbww2022.js");
         })
-        .addMenuButton(PRINT, "Print", "print", window.print)
-        .addMenuButton(UPLOAD, "Upload", "upload", function(){
-            console.log("lineups 44", this);
+        .addMenuButton(PRINT, "Print", "print_button", window.print)
+        .addMenuButton(UPLOAD, "Upload", "upload_button", function(){
+            console.log("lineups 44", $("#upload"));
             $("#upload").click();
         });
     $("#rightbar").append(menuButtons).append(fileInput);
+    loadHY3(fileInput);
 }
 
 $.fn.addMenuButton = function(svg, label, id, clickHandler){
@@ -72,6 +91,7 @@ function attachClickHandlers(){
     let body = $("#body");
     body.on("click", "button.menu", function(e){
         e.stopImmediatePropagation();
+        console.log(this);
         $(this).data("onclick").call();
     });
     body.on("click", "button.meet", function(e){

@@ -66,6 +66,7 @@ function SavedEntry(entry, meet, roster){
 Entry.prototype.removeEntry = function() {
     let entries = this.meet.entries;
     let index = entries.indexOf(this);
+    console.log(this);
     if (index > -1) {
         entries.splice(index, 1);
     }

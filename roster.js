@@ -45,7 +45,7 @@ function compareNames(a, b){
     let apellidoB = b.apellido.toUpperCase();
     let nombreA = a.nombre.toUpperCase();
     let nombreB = b.nombre.toUpperCase();
-    console.log(apellidoA, apellidoB);
+    //console.log(apellidoA, apellidoB);
     if (apellidoA < apellidoB){
         return -1;
     }

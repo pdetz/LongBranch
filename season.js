@@ -47,10 +47,13 @@ function SavedSeason(season){
 function MeetType(meetType){
     this.name = meetType.name;
     this.ageGroups = meetType.ageGroups;
-    this.events = [];
-    meetType.events.forEach(e=>{
+    this.events = [];//EVENTS;
+    
+    //meetType.events.forEach(e=>{
+    EVENTS.forEach(e =>{
         this.events.push(new Event(e, this.ageGroups));
     });
+
 }
 
 function SavedMeetType(meetType){
