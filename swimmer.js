@@ -6,6 +6,7 @@ function Swimmer(swimmer){
     this.gender = swimmer.gender;
     this.id = swimmer.id;
     this.address = swimmer.address;
+    this.zip = swimmer.zip;
 
     //this.age = age;
     this.age = age(this.dob, "06012022");
@@ -29,6 +30,7 @@ function SavedSwimmer(swimmer){
     this.gender = swimmer.gender;
     this.id = swimmer.id;
     this.address = swimmer.address;
+    this.zip = swimmer.zip;
 }
 
 function age(dob, date){

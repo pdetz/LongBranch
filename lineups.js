@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     load(season);
 
-    $("#right").append(season.viewRoster());
+    $("#right").append(loadEditor(season));
 
     $.getJSON('lb.json', function(data) {
         console.log(data);
@@ -38,14 +38,15 @@ function loadHY3(fileInput, season){
                     nickname : athleteInfo.slice(46, 66).trim(),
                     id : athleteInfo.slice(66, 86).trim(),
                     dob : athleteInfo.slice(86, 94).trim(),
-                    address : lines[1].slice(2, 62) + "/" + lines[1].slice(62, 94) + " " + lines[1].slice(94, 99)
+                    address : lines[1].slice(2, 62).trim(),
+                    zip: lines[1].slice(94, 99)
                 };
+                console.log(swimmer.nombre, swimmer.address, swimmer.zip);
 
                 roster.push(new Swimmer(swimmer));
 
             });    
             season.roster = roster;
-            console.log(season.roster);
 
             $("table.roster").remove();
 
@@ -178,4 +179,14 @@ function attachKeyHandlers(){
         //input.data("obj")[input.data("prop")] = input.val();
         input.setVar(input.val());
     });
+/*
+    $("#left").on("keyup", "input.meet_info", function(e){
+        let input = $(this);
+        let teacher = input.obj();
+        meet.name = input.val();
+        if (e.which == 13){
+            input.blur();
+        }
+    });
+*/
 }
