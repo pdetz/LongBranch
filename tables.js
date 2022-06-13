@@ -74,7 +74,7 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
     let tr = make("tr" + swimmerRowID(swimmer, meet))  
         .append(make("td").html(swimmer.display()));
     for (let i = 0; i < 5; i++){
-        let bolt = make("button.bolt").html(BOLT)
+        let bolt = make("button.bolt") //.html(BOLT)
             .data("swimmer", swimmer)
             .data("meet", meet)
             .data("e", eventNumbers[i]);

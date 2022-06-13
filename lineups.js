@@ -1,5 +1,8 @@
+let KEYPRESSED = 0;
+
 $(document).ready(function(){
- 
+
+
     let season = new Season(LBWW22);
 
     loadMenu(season);
@@ -151,11 +154,20 @@ function attachClickHandlers(){
         console.log(swimmer, meet, eN);
         if (button.hasClass("entry")){
             console.log(button.data("entry"));
+            button.empty();
             button.data("entry").removeEntry();
             button.data("entry", "");
         }
         else {
-            let entry = newEntry(meet, eN, swimmer, "");
+            let t = "";
+            if (KEYPRESSED == 0){
+                button.append(BOLT);
+            }
+            else {
+                button.append('DQ');
+                t = "DQ";
+            }
+            let entry = newEntry(meet, eN, swimmer, t);
             meet.entries.push(entry);
             button.data("entry", entry);
             console.log(meet.entries);
@@ -174,12 +186,25 @@ function Input(obj, prop, size) {
 
 function attachKeyHandlers(){
     let right = $("#right");
+
+    $(window).keydown(function(e) {
+        if (KEYPRESSED != e.which){
+            KEYPRESSED = e.which;
+            console.log(KEYPRESSED, e.which);
+        }
+    });
+    $(window).keyup(function(e) {
+        KEYPRESSED = 0;
+        console.log(KEYPRESSED);
+    });
+
+
     right.on("keyup", "input.var", function(e){
         let input = $(this);
         //input.data("obj")[input.data("prop")] = input.val();
         input.setVar(input.val());
     });
-/*
+    /*
     $("#left").on("keyup", "input.meet_info", function(e){
         let input = $(this);
         let teacher = input.obj();

@@ -25,6 +25,7 @@ function SavedMeet(meet, season){
     
     meet.entries.forEach(entry =>{
         this.entries.push(new SavedEntry(entry, meet, season.roster));
+        console.log(meet.entries);
     })
 
     this.pool = meet.pool;
@@ -55,6 +56,7 @@ function Entry(entry, meet, roster){
     //this.swimmer = entry.swimmer;
     this.swimmer = roster[entry.swimmer];
     this.time = entry.t;
+    console.log(this);
 }
 
 function SavedEntry(entry, meet, roster){
