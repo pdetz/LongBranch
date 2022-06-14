@@ -2,11 +2,11 @@ $(document).ready(function(){
     let season = new Season(LBWW22);
 
     loadTables(season);
+    loadEditors(season);
     loadLeftBar(season);
     loadRightBar(season);
-    loadEditors(season);
 
-    $("#right").append(loadEditor(season));
+    //$("#right").append(loadEditor(season));
 
     attachClickHandlers();
     attachKeyHandlers();

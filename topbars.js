@@ -11,8 +11,13 @@ function loadLeftBar(season){
 function loadRightBar(season){
     let fileInput = $('<input type="file" id="upload" accept=".hy3,.HY3" style="display:none"></input>');
 
-    let menuButtons = make("div")
+    let buttons = make("div");
 
+    season.editors.forEach(editor =>{
+        buttons.append(editor.button);
+    });
+
+    buttons
         .addMenuButton(DOWNLOAD, "Download", "download_button", function(){
             let newSeason = new SavedSeason(season);
             console.log(newSeason);
@@ -20,7 +25,7 @@ function loadRightBar(season){
         })
         .addMenuButton(PRINT, "Print", "print_button", window.print)
         .addMenuButton(UPLOAD, "Upload", "upload_button", function(){$("#upload").click();});
-    $("#rightbar").append(menuButtons).append(fileInput);
+    $("#rightbar").append(buttons).append(fileInput);
     loadHY3(fileInput, season);
 }
 

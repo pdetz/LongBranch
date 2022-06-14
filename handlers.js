@@ -4,7 +4,7 @@ function attachClickHandlers(){
         e.stopImmediatePropagation();
         $(this).data("onclick").call();
     });
-    body.on("click", "button.meet", function(e){
+    $('#leftbar').on("click", "button.meet", function(e){
         e.stopImmediatePropagation();
         let button = $(this);
         if (!button.hasClass("sel")){
@@ -15,7 +15,20 @@ function attachClickHandlers(){
             $("button.sel").removeClass("sel");
             button.toggleClass("sel");
         };
-    });
+    });   
+    $('#rightbar').on("click", "button.editor", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        if (!button.hasClass("sel")){
+            let editor = button.data("editor");
+            $("#right").children().hide();
+            $("#right").append(editor);
+            editor.show();
+            $("button.sel").removeClass("sel");
+            button.toggleClass("sel");
+            console.log(editor);
+        };
+    });   
     body.on("click", "button.bolt", function(e){
         e.stopImmediatePropagation();
         let button = $(this);

@@ -1,7 +1,7 @@
 function Editor(name, editor){
     this.name = name;
     this.editor = editor;
-    this.button = make("button.top").html(name).data("view", this.editor);
+    this.button = make("button.top.editor").html(name).data("editor", this.editor);
 
 }
 
@@ -11,6 +11,7 @@ function loadEditors(season) {
     season.editors.push(new Editor("Meets", meetEditor(season)));
     season.editors.push(new Editor("Roster", rosterEditor(season)));
     
+    console.log(season.editors);
     
 }
 
@@ -25,7 +26,7 @@ function meetEditor(season){
 function rosterEditor(season){
     editor = make("div.editor");
     season.roster.forEach(swimmer =>{
-        editor.append(swimmer.nombre + ' ' + swimmer.apellido + '\n');
+        editor.append(swimmer.nombre + ' ' + swimmer.apellido + '<br>');
     });
     return editor;
 }
