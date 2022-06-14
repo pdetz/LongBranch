@@ -6,15 +6,12 @@ function Editor(name, editor){
 }
 
 function loadEditors(season) {
-    let season.editors = [];
+    season.editors = [];
 
     season.editors.push(new Editor("Meets", meetEditor(season)));
     season.editors.push(new Editor("Roster", rosterEditor(season)));
     
     
-
-    editor.append(meetTitle);
-    season.meetEditor = editor;
 }
 
 function meetEditor(season){
