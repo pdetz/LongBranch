@@ -11,7 +11,7 @@ button.tools:hover {
 button.menu{
     border-radius: 0.3em;
     background: none;
-    margin: 2pt;
+    margin: 0 4px;
 }
 
 button.menu svg {
@@ -23,19 +23,21 @@ button.menu:hover svg {
     fill: #6af;
 }
 
-button.meet {
-    min-width: 40pt;
-    font-size: 14pt;
+button.top {
+    min-width: 30pt;
+    font-size: 12pt;
+    font-weight: bold;
     margin: 0 4px;
+    padding: 1px 2px 0px 2px;
     border-radius: 0.3em;
     background: #fff;
 }
 
-button.meet:hover {
+button.top:hover {
     background: #8cf;
 }
 
-button.meet.sel {
+button.top.sel {
     background: #6af;
 }
 

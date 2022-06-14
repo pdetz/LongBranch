@@ -1,6 +1,5 @@
-Season.prototype.loadTables = function(){
-    let season = this;
-
+function loadTables(season){
+    
     season.meets.forEach(meet =>{
         meet.lineup.append(meet.name, "<br>");
     
@@ -101,17 +100,6 @@ function ageMatch(a, b){
         });
     }
     return match;
-}
-
-Season.prototype.loadButtons = function(){
-    let season = this;
-    let buttons = make("div.topbar");
-
-    season.meets.forEach(meet =>{
-        buttons.append(make("button.meet").html(meet.name).data("meet", meet));
-    });
-
-    $("#leftbar").append(buttons);
 }
 
 Season.prototype.loadDropDowns = function(){

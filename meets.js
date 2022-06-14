@@ -15,6 +15,7 @@ function Meet(meet, season){
     this.time = meet.time;
 
     this.lineup = make("div.meet_lineup");
+    this.button = make("button.top.meet").html(this.name).data("meet", this);
 }
 
 function SavedMeet(meet, season){

@@ -5,5 +5,5 @@ function loadEditor(season) {
     
 
     editor.append(meetTitle);
-    return editor;
+    season.meetEditor = editor;
 }
