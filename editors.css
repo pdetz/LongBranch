@@ -1,0 +1,16 @@
+div.meetEditor{
+    margin: 0px;
+    padding: 4px;
+}
+
+
+div.meetEditor:nth-child(even) {background: none;}
+div.meetEditor:nth-child(odd) { background: #def;}
+
+input.edit{
+    margin: 2px 2px 4px 2px;
+}
+
+input.name {width: 30pt;}
+input.title {width: 200pt;}
+textarea.description {width: 100%;}

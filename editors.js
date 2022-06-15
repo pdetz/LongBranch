@@ -18,7 +18,16 @@ function loadEditors(season) {
 function meetEditor(season){
     editor = make("div.editor");
     season.meets.forEach(meet =>{
-        editor.append(meet.name + '\n');
+        let thisMeet = make("div.meetEditor");
+        let name = make("input.edit.name").val(meet.name)
+                    .data("update", meet.button);
+        let title = make("input.edit.title").val(meet.title.html())
+                    .data("update", meet.title);
+        let description = make("textarea.edit.description").val(meet.description.html())
+                            .data("update", meet.description);
+        thisMeet.append(name, " &#8212; ", title, description);
+
+        editor.append(thisMeet);
     });
     return editor;
 }

@@ -1,9 +1,11 @@
 function attachClickHandlers(){
     let body = $("#body");
+
     body.on("click", "button.menu", function(e){
         e.stopImmediatePropagation();
         $(this).data("onclick").call();
     });
+    
     $('#leftbar').on("click", "button.meet", function(e){
         e.stopImmediatePropagation();
         let button = $(this);
@@ -16,6 +18,7 @@ function attachClickHandlers(){
             button.toggleClass("sel");
         };
     });   
+    
     $('#rightbar').on("click", "button.editor", function(e){
         e.stopImmediatePropagation();
         let button = $(this);
@@ -29,6 +32,7 @@ function attachClickHandlers(){
             console.log(editor);
         };
     });   
+    
     body.on("click", "button.bolt", function(e){
         e.stopImmediatePropagation();
         let button = $(this);
@@ -70,6 +74,12 @@ function Input(obj, prop, size) {
 
 function attachKeyHandlers(){
     let right = $("#right");
+
+    $("#right").on("keyup", ".edit", function(e) {
+        e.stopImmediatePropagation();
+        let input = $(this);
+        input.data("update").html(input.val());
+    });
 
     $(window).keydown(function(e) {
         if (KEYPRESSED != e.which){

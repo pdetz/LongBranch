@@ -1,6 +1,10 @@
 function Meet(meet, season){
     this.name = meet.name;
+    this.title = make("div.title").html(meet.title);
+    this.description = make("div.description").html(meet.description);
+
     this.type = season.meetTypes[meet.type];
+    this.date = meet.date;
 
     this.entries = [];
 
@@ -8,11 +12,6 @@ function Meet(meet, season){
     meet.entries.forEach(entry => {
         this.entries.push(new Entry(entry, this, season.roster));
     }); // array of Entries
-    
-    this.pool = meet.pool;
-    this.address = meet.address;
-    this.date = meet.date;
-    this.time = meet.time;
 
     this.lineup = make("div.meet_lineup");
     this.button = make("button.top.meet").html(this.name).data("meet", this);
@@ -20,8 +19,11 @@ function Meet(meet, season){
 
 function SavedMeet(meet, season){
     this.name = meet.name;
+    this.title = meet.title.html();
+    this.description = meet.title.html();
     this.type = season.meetTypes.indexOf(meet.type);
     
+    this.date = meet.date;
     this.entries = [];
     
     meet.entries.forEach(entry =>{
@@ -29,10 +31,6 @@ function SavedMeet(meet, season){
         console.log(meet.entries);
     })
 
-    this.pool = meet.pool;
-    this.address = meet.address;
-    this.date = meet.date;
-    this.time = meet.time;
 }
 
 function Event(e, ageGroups){

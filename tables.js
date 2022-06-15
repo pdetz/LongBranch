@@ -1,7 +1,7 @@
 function loadTables(season){
-    
+
     season.meets.forEach(meet =>{
-        meet.lineup.append(meet.name, "<br>");
+        meet.lineup.append(meet.title, meet.description);
     
         for (let i = 0; i < 5; i++){
             let tables = make("div.lineup");

@@ -49,6 +49,15 @@ div.lineup div{
     vertical-align:top;
 }
 
+div.title {
+    font-weight:bold;
+    margin: 0 0 4px 0;
+}
+
+div.description{
+    margin: 4px;
+}
+
 div.half {
     width:50%;
     display: inline-block;
