@@ -1,4 +1,7 @@
 function Meet(meet, season){
+
+    let thisMeet = this;
+
     this.name = meet.name;
     this.title = make("div.title").html(meet.title);
     this.description = make("div.description").html(meet.description);
@@ -10,7 +13,8 @@ function Meet(meet, season){
 
    
     meet.entries.forEach(entry => {
-        this.entries.push(new Entry(entry, this, season.roster));
+        thisMeet.entries.push(new Entry(entry, thisMeet, season.roster));
+        console.log(entry);
     }); // array of Entries
 
     this.lineup = make("div.meet_lineup");

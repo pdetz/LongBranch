@@ -13,12 +13,37 @@ function loadHY3(fileInput, season, loadFunction, meet){
 }
 
 function loadEntries(uploadedFile, season, meet){
-    let athletes = uploadedFile.split("\nD1");
-    let roster = [];
+    let athletes = uploadedFile.slice(0,-1).split("\nD1");
+
+    meet.entries = [];
+    meet.lineup.empty();
+
     athletes.slice(1).forEach(athlete =>{
+
         let entries = athlete.split('\n');
-        console.log(athlete, entries);
+
+        const id = entries.shift().slice(66, 81).trim();
+        console.log(id);
+        let entrySwimmer = "";
+
+        season.roster.forEach(swimmer =>{
+            if (swimmer.id == id) {
+                entrySwimmer = swimmer;
+            }
+        });
+
+        entries.forEach(hy3Entry =>{
+            console.log(hy3Entry);
+            let e = parseInt(hy3Entry.slice(39, 41).trim());
+            let t = parseFloat(hy3Entry.slice(44, 51).trim());
+            meet.entries.push(newEntry(meet, e-1, entrySwimmer, t));
+            console.log(e, t);
+        });
+        console.log(entrySwimmer, entries);
     });
+
+
+    loadTable(meet, season);
 }
 
 function loadRoster(uploadedFile, season, meet){

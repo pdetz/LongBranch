@@ -1,20 +1,25 @@
 function loadTables(season){
 
     season.meets.forEach(meet =>{
-        meet.lineup.append(meet.title, meet.description);
-    
-        for (let i = 0; i < 5; i++){
-            let tables = make("div.lineup");
-            ["M", "F"].forEach(gender => {
-                let half = make("div.half");
-                half.append(season.lineupTable(i, gender, meet));
-                tables.append(half);
-            });
-            meet.lineup.append(tables);
-        }
+        loadTable(meet, season);
     });
 
     $("#left").append(season.meets[season.currentMeet].lineup);
+}
+
+function loadTable(meet, season){
+    meet.lineup.append(meet.title, meet.description);
+    
+    for (let i = 0; i < 5; i++){
+        let tables = make("div.lineup");
+        ["M", "F"].forEach(gender => {
+            let half = make("div.half");
+            half.append(season.lineupTable(i, gender, meet));
+            tables.append(half);
+        });
+        meet.lineup.append(tables);
+    }
+    console.log(meet);
 }
 
 Season.prototype.lineupTable = function(ag, gender, meet){
@@ -80,8 +85,9 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
         tr.append(make("td").append(bolt));
         meet.entries.forEach(entry => {
             if (entry.swimmer == swimmer && entry.e == meet.type.events[eventNumbers[i]]){
-                bolt.addClass("entry");
-                bolt.data("entry", entry);
+                bolt.addClass("entry")
+                    .data("entry", entry)
+                    .html(BOLT);
             }
         });
     }
