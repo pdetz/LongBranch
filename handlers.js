@@ -32,7 +32,14 @@ function attachClickHandlers(){
             console.log(editor);
         };
     });   
-    
+
+    $('#right').on("click", "button.top.entries", function(e){
+        e.stopImmediatePropagation();
+            let button = $(this);
+            console.log(button);
+            button.parent().children("input.entries").click();
+    });
+        
     body.on("click", "button.bolt", function(e){
         e.stopImmediatePropagation();
         let button = $(this);

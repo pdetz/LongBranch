@@ -14,3 +14,19 @@ input.edit{
 input.name {width: 30pt;}
 input.title {width: 200pt;}
 textarea.description {width: 100%;}
+
+button.top.entries {
+    background-color: #00f;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #fff;
+    padding: 2px 8px;
+    margins: 4px;
+}
+
+button.entries svg{
+    display: inline;
+    height: 1em;
+    vertical-align: top;
+    fill: #fff;
+}

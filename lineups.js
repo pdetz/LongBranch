@@ -6,57 +6,13 @@ $(document).ready(function(){
     loadLeftBar(season);
     loadRightBar(season);
 
-    //$("#right").append(loadEditor(season));
+    console.log(season.editors[0].editor);
+
+    $("#right").append(season.editors[0].editor);
 
     attachClickHandlers();
     attachKeyHandlers();
 });
-
-function loadHY3(fileInput, season){
-    let roster = [];
-    fileInput.change(function(){
-        let file = fileInput.get(0).files[0];
-        let reader = new FileReader();
-        reader.onload = function(){
-            let uploadedFile = reader.result;
-
-            let athletes = uploadedFile.split("\nD1");
-            //console.log(athletes);
-            athletes.slice(1).forEach(athlete =>{
-
-                let lines = athlete.split("\n");
-                let athleteInfo = lines[0];
-
-                const swimmer = {
-                    gender : athleteInfo.slice(0, 1),
-                    apellido : athleteInfo.slice(6, 26).trim(),
-                    nombre : athleteInfo.slice(26, 46).trim(),
-                    nickname : athleteInfo.slice(46, 66).trim(),
-                    id : athleteInfo.slice(66, 86).trim(),
-                    dob : athleteInfo.slice(86, 94).trim(),
-                    address : lines[1].slice(2, 62).trim(),
-                    zip: lines[1].slice(94, 99)
-                };
-                console.log(swimmer.nombre, swimmer.address, swimmer.zip);
-
-                roster.push(new Swimmer(swimmer));
-
-            });    
-            season.roster = roster;
-
-            $("table.roster").remove();
-
-            season.meets.forEach(meet =>{
-                meet.lineup.append("testing");
-                meet.lineup.empty();
-            });
-            //$(".meet_lineup").remove();
-            season.loadTables();
-        };
-        reader.readAsText(file);
-        
-    });
-}
 
 function clearSeasonEntries(season){
     season.meets.forEach(meet =>{

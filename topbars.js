@@ -10,6 +10,8 @@ function loadLeftBar(season){
 
 function loadRightBar(season){
     let fileInput = $('<input type="file" id="upload" accept=".hy3,.HY3" style="display:none"></input>');
+    $("#rightbar").append(fileInput);
+    loadHY3(fileInput, season, loadRoster);
 
     let buttons = make("div");
 
@@ -25,8 +27,8 @@ function loadRightBar(season){
         })
         .addMenuButton(PRINT, "Print", "print_button", window.print)
         .addMenuButton(UPLOAD, "Upload", "upload_button", function(){$("#upload").click();});
-    $("#rightbar").append(buttons).append(fileInput);
-    loadHY3(fileInput, season);
+        $("#rightbar").append(buttons);
+
 }
 
 $.fn.addMenuButton = function(svg, label, id, clickHandler){
