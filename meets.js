@@ -24,7 +24,7 @@ function Meet(meet, season){
 function SavedMeet(meet, season){
     this.name = meet.name;
     this.title = meet.title.html();
-    this.description = meet.title.html();
+    this.description = meet.description.html();
     this.type = season.meetTypes.indexOf(meet.type);
     
     this.date = meet.date;

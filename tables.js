@@ -4,7 +4,7 @@ function loadTables(season){
         loadTable(meet, season);
     });
 
-    $("#left").append(season.meets[season.currentMeet].lineup);
+    $("#left").append(season.currentMeet.lineup);
 }
 
 function loadTable(meet, season){

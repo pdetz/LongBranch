@@ -57,9 +57,9 @@ function loadRoster(uploadedFile, season, meet){
 
                 const swimmer = {
                     gender : athleteInfo.slice(0, 1),
-                    apellido : athleteInfo.slice(6, 26).trim(),
-                    nombre : athleteInfo.slice(26, 46).trim(),
-                    nickname : athleteInfo.slice(46, 66).trim(),
+                    apellido : upperCaseName(athleteInfo.slice(6, 26).trim()),
+                    nombre : upperCaseName(athleteInfo.slice(26, 46).trim()),
+                    nickname : upperCaseName(athleteInfo.slice(46, 66).trim()),
                     id : athleteInfo.slice(66, 86).trim(),
                     dob : athleteInfo.slice(86, 94).trim(),
                     address : lines[1].slice(2, 62).trim(),
@@ -79,4 +79,8 @@ function loadRoster(uploadedFile, season, meet){
             });
             //$(".meet_lineup").remove();
             loadTables(season);
+}
+
+function upperCaseName(name){
+    return name.charAt(0).toUpperCase() + name.slice(1);
 }

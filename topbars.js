@@ -3,6 +3,9 @@ function loadLeftBar(season){
 
     season.meets.forEach(meet =>{
         buttons.append(meet.button);
+        if (meet == season.currentMeet){
+            meet.button.addClass("sel");
+        }
     });
 
     $("#leftbar").append(buttons);

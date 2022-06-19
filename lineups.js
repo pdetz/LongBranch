@@ -6,11 +6,12 @@ $(document).ready(function(){
     loadLeftBar(season);
     loadRightBar(season);
 
-    console.log(season.editors[0].editor);
-
+    console.log(season.currentMeet);
+    //console.log(currentMeet.title);
+    document.title = season.currentMeet.title.html();
     $("#right").append(season.editors[0].editor);
 
-    attachClickHandlers();
+    attachClickHandlers(season);
     attachKeyHandlers();
 });
 

@@ -1,4 +1,4 @@
-function attachClickHandlers(){
+function attachClickHandlers(season){
     let body = $("#body");
 
     body.on("click", "button.menu", function(e){
@@ -16,6 +16,8 @@ function attachClickHandlers(){
             meet.lineup.show();
             $("button.sel").removeClass("sel");
             button.toggleClass("sel");
+            season.currentMeet = meet;
+            document.title = season.currentMeet.title.html();
         };
     });   
     
@@ -58,9 +60,9 @@ function attachClickHandlers(){
             if (KEYPRESSED == 0){
                 button.append(BOLT);
             }
-            else {
-                button.append('DQ');
-                t = "DQ";
+            else if (KEYPRESSED == 83) {
+                button.append(STAR);
+                //button.data("entry").flag("swim up");
             }
             let entry = newEntry(meet, eN, swimmer, t);
             meet.entries.push(entry);
