@@ -78,7 +78,7 @@ const _13_14 = new AgeGroup("13-14", [13, 14]);
 const _15_18 = new AgeGroup("15-18", [15, 16, 17, 18]);
 const _12U = new AgeGroup("12&U", [4, 5, 6, 7, 8, 9, 10, 11, 12]);
 const _10U = new AgeGroup("10&U", [4, 5, 6, 7, 8, 9, 10]);
-const _OPEN = new AgeGroup("10&U", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
+const _OPEN = new AgeGroup("Open", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]);
 
 const AGE_GROUPS = [_8U, _9_10, _11_12, _13_14, _15_18, _12U, _10U, _OPEN];
 

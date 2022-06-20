@@ -33,14 +33,23 @@ function ISEvent(season, events){
 ISEvent.prototype.eventEditor = function(season, events){
     let eventTitle = make("div.eventTitle");
     let editor =  make("div.builder").append(eventTitle);
+    let eventNumber = make("span.eventNumber").html(this.n);
 
+    eventTitle.append("Event ", eventNumber, ". Swimmers ");
+    let ages = [_12U, _OPEN];
+    for (a = 0; a < 2; a++){
+        eventTitle.append(make("button.eventTitle.ageGroup").append(ages[a].name));
+    }
+    
+    eventTitle.append(make("span.hide").append(" | "));
 
-    eventTitle.append("Event ", this.n, ".");
     let distances = ["25M", "50M", "100M"];
     for (d = 0; d < 3; d++){
         eventTitle.append(make("button.eventTitle.distance").append(distances[d]));
     }
 
+    eventTitle.append(make("span.hide").append(" | "));
+    
     STROKES.forEach(stroke =>{
         eventTitle.append(make("button.eventTitle.abbr").append(stroke.abbr))
                     .append(make("button.eventTitle.sel.strokeName").append(stroke.name));
