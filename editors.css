@@ -80,20 +80,11 @@ div.heat {
 button.eventTitle {
     border-radius: 0.3em;
     padding:2px 4px;
-    color:#111;
-    margin: 0 0.2em;
-}
-
-button.eventTitle.distance:first-child{
-    margin-left:0.5em;
+    margin: 0 0.2em 0.2em 0.2em;
 }
 
 
 div.eventTitle{
     font-weight:bold;
     margin-bottom:0.5em;
-}
-
-button.eventTitle.strokeName{
-    display:none;
 }

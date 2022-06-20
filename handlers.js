@@ -6,6 +6,33 @@ function attachClickHandlers(season){
         $(this).data("onclick").call();
     });
     
+    $("#right").on("click", "button.eventTitle.distance", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        button.data("e").distance = button.html();
+        $("button.eventTitle.distance.sel").removeClass("sel");
+        button.addClass("sel");
+        button.data("e").updateTitle();
+    });
+    $("#right").on("click", "button.eventTitle.ageGroup", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        console.log(button.data("e"), "Event data");
+        button.data("e").ageGroup = button.data("age");
+        $("button.eventTitle.ageGroup.sel").removeClass("sel");
+        button.addClass("sel");
+        button.data("e").updateTitle();
+    });
+    $("#right").on("click", "button.eventTitle.stroke", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        button.data("e").stroke = button.data("stroke");
+        console.log(button.data("e"));
+        $("button.eventTitle.stroke.sel").removeClass("sel");
+        button.addClass("sel");
+        button.data("e").updateTitle();
+    });
+
     $('#leftbar').on("click", "button.meet", function(e){
         e.stopImmediatePropagation();
         let button = $(this);
@@ -14,7 +41,7 @@ function attachClickHandlers(season){
             $("#left").children().hide();
             $("#left").append(meet.lineup);
             meet.lineup.show();
-            $("button.sel").removeClass("sel");
+            $("button.meet.sel").removeClass("sel");
             button.toggleClass("sel");
             season.currentMeet = meet;
             document.title = season.currentMeet.title.html();
@@ -29,7 +56,7 @@ function attachClickHandlers(season){
             $("#right").children().hide();
             $("#right").append(editor);
             editor.show();
-            $("button.sel").removeClass("sel");
+            $("button.editor.sel").removeClass("sel");
             button.toggleClass("sel");
             console.log(editor);
         };
@@ -54,9 +81,16 @@ function attachClickHandlers(season){
             button.empty();
             button.data("entry").removeEntry();
             button.data("entry", "");
+            button.data("stroke","");
+            button.data("distance","");
         }
         else {
             let t = "";
+            let entry = newEntry(meet, eN, swimmer, t);
+            meet.entries.push(entry);
+            button.data("entry", entry);
+            button.data("stroke", meet.type.events[eN].stroke);
+            //console.log(meet.entries);
             if (KEYPRESSED == 0){
                 button.append(BOLT);
             }
@@ -64,10 +98,19 @@ function attachClickHandlers(season){
                 button.append(STAR);
                 //button.data("entry").flag("swim up");
             }
-            let entry = newEntry(meet, eN, swimmer, t);
-            meet.entries.push(entry);
-            button.data("entry", entry);
-            //console.log(meet.entries);
+            else if (KEYPRESSED == 50 || KEYPRESSED == 98){
+                button.append("25");
+                button.data("distance","25M");
+            }
+            else if (KEYPRESSED == 53 || KEYPRESSED == 101){
+                button.append("50");
+                button.data("distance","50M");
+            }
+            else if (KEYPRESSED == 49 || KEYPRESSED == 97){
+                button.append("100");
+                button.data("distance","100M");
+            }
+            
         }
         button.toggleClass("entry");
     });

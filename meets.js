@@ -9,6 +9,8 @@ function Meet(meet, season){
     this.type = season.meetTypes[meet.type];
     this.date = meet.date;
 
+    this.ISMeet = "";
+
     this.entries = [];
 
    
@@ -26,6 +28,8 @@ function SavedMeet(meet, season){
     this.description = meet.description.html();
     this.type = season.meetTypes.indexOf(meet.type);
     
+    this.ISMeet = meet.ISMeet;
+
     this.date = meet.date;
     this.entries = [];
     

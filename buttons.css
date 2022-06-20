@@ -45,12 +45,14 @@ button.top:hover {
     background: #8cf;
 }
 
-button.top.sel {
+button.sel {
     background: #6af;
 }
 
 button.bolt {
     height:12pt;
+    font-size:8pt;
+    vertical-align: center;
     width: 100%;
     background-color: transparent;
 }
