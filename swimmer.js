@@ -47,3 +47,15 @@ Swimmer.prototype.isAge = function(ageGroup){
     });
     return is;
 }
+
+function EMPTY(){
+    this.dob = "";
+    this.nombre = "";
+    this.apellido = "";
+    this.nickname = "";
+    this.display = function(){
+        return "aja querida";
+    }
+}
+
+const NO_SWIMMER = new EMPTY();

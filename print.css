@@ -82,4 +82,24 @@
     #copyright {
         display:none;
     }
+
+
+    button.new {
+        display:none;
+    }
+
+    button.eventTitle {
+        display:none;
+    }
+    button.eventTitle.sel{
+        background-color: transparent;
+        margin: 0;
+    }
+    button.lane.name {
+        background-color: #fff;
+        color:#000;
+    }
+    button.eventTitle.sel.strokeName{
+        display:inline;
+    }
 }

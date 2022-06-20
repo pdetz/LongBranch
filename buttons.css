@@ -1,3 +1,11 @@
+button {
+    border-radius: 0.3em;
+    background-color: #def;
+}
+button:hover {
+    background-color: #8cf;
+}
+
 button.tools {
     min-width: 50px;
     border:none;
@@ -44,6 +52,7 @@ button.top.sel {
 button.bolt {
     height:12pt;
     width: 100%;
+    background-color: transparent;
 }
 
 button.bolt svg {

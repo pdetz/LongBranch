@@ -21,7 +21,7 @@ button.top.entries {
     font-weight: normal;
     color: #fff;
     padding: 2px 8px;
-    margins: 4px;
+    margin: 4px;
 }
 
 button.entries svg{
@@ -29,4 +29,71 @@ button.entries svg{
     height: 1em;
     vertical-align: top;
     fill: #fff;
+}
+
+div.builder {
+    border: 1px solid black;
+    padding: 4px;
+    margin: 4px;
+    text-align:left;
+
+}
+
+button.new {
+    border-radius: 0.3em;
+    padding: 2px 8px;
+    margin: 4px;
+}
+
+
+div.lane {
+    font-size:8pt;
+    min-height:16pt;
+    margin-left: 20pt;
+}
+
+
+button.lane.name {
+    border-radius: 0.3em;
+    display: in-line;
+    font-size: 10pt;
+    padding: 2px 4px;
+    margin-left: 8pt;
+    width:120pt;
+    text-align: left;
+}
+
+
+button.lane.name:hover{
+    color:#fff;
+    background-color: #000;
+}
+
+div.heat {
+    display: inline-block;
+    font-size: 10pt;
+    text-align: left;
+    margin-bottom:6pt;
+    margin-left:12pt;
+}
+
+button.eventTitle {
+    border-radius: 0.3em;
+    padding:2px 4px;
+    color:#111;
+    margin: 0 0.2em;
+}
+
+button.eventTitle.distance:first-child{
+    margin-left:0.5em;
+}
+
+
+div.eventTitle{
+    font-weight:bold;
+    margin-bottom:0.5em;
+}
+
+button.eventTitle.strokeName{
+    display:none;
 }

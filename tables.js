@@ -19,7 +19,6 @@ function loadTable(meet, season){
         });
         meet.lineup.append(tables);
     }
-    console.log(meet);
 }
 
 Season.prototype.lineupTable = function(ag, gender, meet){

@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
     let season = new Season(LBWW22);
 
@@ -9,7 +12,7 @@ $(document).ready(function(){
     console.log(season.currentMeet);
     //console.log(currentMeet.title);
     document.title = season.currentMeet.title.html();
-    $("#right").append(season.editors[0].editor);
+    $("#right").append(season.editors[2].editor);
 
     attachClickHandlers(season);
     attachKeyHandlers();

@@ -96,6 +96,8 @@ const RELAY = new Stroke("Relay", "RE");
 
 const STROKES = [IM, FR, BK, BR, FL, RELAY];
 
+const DISTANCES = ["25M", "50M", "100M"];
+
 function Gender(name, abbr){
     this.name = name;
     this.abbr = abbr;
