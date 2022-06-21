@@ -87,6 +87,7 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
                 bolt.addClass("entry")
                     .data("entry", entry)
                     .html(BOLT);
+                entry.button = bolt;
             }
         });
     }

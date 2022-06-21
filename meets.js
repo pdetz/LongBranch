@@ -9,7 +9,7 @@ function Meet(meet, season){
     this.type = season.meetTypes[meet.type];
     this.date = meet.date;
 
-    this.ISMeet = "";
+    this.ISMeet = "A Meet";
 
     this.entries = [];
 
@@ -28,7 +28,7 @@ function SavedMeet(meet, season){
     this.description = meet.description.html();
     this.type = season.meetTypes.indexOf(meet.type);
     
-    this.ISMeet = meet.ISMeet;
+    this.ISMeet = new SavedISMeet(meet.ISMeet);
 
     this.date = meet.date;
     this.entries = [];
@@ -62,12 +62,17 @@ function Entry(entry, meet, roster){
     //this.swimmer = entry.swimmer;
     this.swimmer = roster[entry.swimmer];
     this.time = entry.t;
+    this.heat = "";
+    this.lane = "";
+    this.button = "";
 }
 
 function SavedEntry(entry, meet, roster){
     this.e = meet.type.events.indexOf(entry.e);
     this.swimmer = roster.indexOf(entry.swimmer);
     this.time = entry.t;
+    this.heat = entry.heat;
+    this.lane = entry.lane;
 }
 
 Entry.prototype.removeEntry = function() {

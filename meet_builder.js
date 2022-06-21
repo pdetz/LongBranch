@@ -1,6 +1,7 @@
 function meetBuilder(season){
 
     let meet = new ISMeet(season, season.meets[1]);
+    season.meets[1].ISMeet = meet;
     let builder = make("div.editor");
 
     builder.append(newEventButton(meet.events));
@@ -20,9 +21,18 @@ function newEventButton(events){
 function ISMeet(season, meet){
     this.meet = meet;
     this.events = [];
-    this.events.push(new ISEvent(season, this.events));
-    this.events.push(new ISEvent(season, this.events));
+    for (e = 0; e < 13; e++){
+        this.events.push(new ISEvent(season, this.events));
+    }
     console.log(this.events[0].titleLine);
+}
+
+function SavedISMeet(season, isMeet){
+    this.meet = season.meets.indexOf(isMeet.meet);
+    this.events = [];
+    isMeet.events.forEach(event=>{
+        this.events.push(new)
+    });
 }
 
 function ISEvent(season, events){
@@ -30,8 +40,7 @@ function ISEvent(season, events){
     this.heats = [];
     this.heats.push(new Heat(this, season));
     this.heats.push(new Heat(this, season));
-    this.heats.push(new Heat(this, season));
-    this.heats.push(new Heat(this, season));
+    this.swimmers = [];
     this.distance = "25M";
     this.ageGroup = _OPEN;
     this.stroke = FR;

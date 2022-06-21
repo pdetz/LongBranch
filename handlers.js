@@ -87,6 +87,7 @@ function attachClickHandlers(season){
         else {
             let t = "";
             let entry = newEntry(meet, eN, swimmer, t);
+            entry.button = button;
             meet.entries.push(entry);
             button.data("entry", entry);
             button.data("stroke", meet.type.events[eN].stroke);
@@ -110,7 +111,13 @@ function attachClickHandlers(season){
                 button.append("100");
                 button.data("distance","100M");
             }
-            
+            if (meet.ISMeet !== "A Meet"){
+                meet.ISMeet.events.forEach(event => {
+                    if (button.data("distance") == event.distance && button.data("stroke") == event.stroke){
+                        event.swimmers.push[swimmer];
+                    }
+                });
+            }
         }
         button.toggleClass("entry");
     });
