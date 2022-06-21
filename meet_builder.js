@@ -1,15 +1,31 @@
 function meetBuilder(season){
 
-    let meet = new ISMeet(season, season.meets[1]);
-    season.meets[1].ISMeet = meet;
-    let builder = make("div.editor");
+    //let meet = intrasquad(season, season.meets[1]);
+    let meet = season.meets[1].ISMeet; // = meet;
 
-    builder.append(newEventButton(meet.events));
+    let builder = make("div.editor");
+    //builder.append(newEventButton(meet.events));
     meet.events.forEach(event =>{
-        builder.append(event.editor).append(newEventButton(meet.events));
+        builder.append(event.editor);//.append(newEventButton(meet.events));
     });
+
+    console.log("meet builder");
+
     return builder;
 }
+
+function intrasquad(season, meet, events){
+    let newMeet = new ISMeet(season, meet, []);
+    events.forEach(event=>{
+        newMeet.events.push(new ISEvent(season, newMeet.events, event));
+    });
+    return newMeet;
+}
+
+ISMeet.prototype.seedEntry = function(entry, event){
+    console.log(entry, event);
+}
+
 
 function newEventButton(events){
     let button = make("button.new").append("New Event");
@@ -18,32 +34,38 @@ function newEventButton(events){
 
 }
 
-function ISMeet(season, meet){
+
+function loadIntrasquad(season, meet, events){
+    let newMeet = new ISMeet(season, meet, events);
+    return newMeet;
+}
+
+
+function ISMeet(season, meet, events){
     this.meet = meet;
     this.events = [];
-    for (e = 0; e < 13; e++){
-        this.events.push(new ISEvent(season, this.events));
-    }
-    console.log(this.events[0].titleLine);
-}
-
-function SavedISMeet(season, isMeet){
-    this.meet = season.meets.indexOf(isMeet.meet);
-    this.events = [];
-    isMeet.events.forEach(event=>{
-        this.events.push(new)
+    events.forEach(event=>{
+        let newEvent = new ISEvent(season, events, event);
+        this.events.push(newEvent);
+        newEvent.heats = [];
+        for (h = 0; h < event.heats; h++){
+            newEvent.heats.push(new Heat(newEvent, season));
+        }
     });
+    //console.log(this.events[0].titleLine);
 }
 
-function ISEvent(season, events){
-    this.n = events.length + 1;
+function ISEvent(season, events, event){
+    this.n = event.n;
+    this.gender = event.gender;
     this.heats = [];
-    this.heats.push(new Heat(this, season));
-    this.heats.push(new Heat(this, season));
-    this.swimmers = [];
-    this.distance = "25M";
-    this.ageGroup = _OPEN;
-    this.stroke = FR;
+    for (h = 0; h < event.heats; h++){
+        this.heats.push(new Heat(this, season));
+    }
+    //this.swimmers = [];
+    this.distance = event.distance;
+    this.ageGroup = AGE_GROUPS[event.ageGroup];
+    this.stroke = STROKES[event.stroke];
     this.titleLine = make("div.eventTitle").html("this is the title");
     this.editor = this.eventEditor(season, events);
 }

@@ -10,7 +10,7 @@ function attachClickHandlers(season){
         e.stopImmediatePropagation();
         let button = $(this);
         button.data("e").distance = button.html();
-        $("button.eventTitle.distance.sel").removeClass("sel");
+        button.siblings("button.eventTitle.distance.sel").removeClass("sel");
         button.addClass("sel");
         button.data("e").updateTitle();
     });
@@ -19,7 +19,7 @@ function attachClickHandlers(season){
         let button = $(this);
         console.log(button.data("e"), "Event data");
         button.data("e").ageGroup = button.data("age");
-        $("button.eventTitle.ageGroup.sel").removeClass("sel");
+        button.siblings("button.eventTitle.ageGroup.sel").removeClass("sel");
         button.addClass("sel");
         button.data("e").updateTitle();
     });
@@ -28,7 +28,7 @@ function attachClickHandlers(season){
         let button = $(this);
         button.data("e").stroke = button.data("stroke");
         console.log(button.data("e"));
-        $("button.eventTitle.stroke.sel").removeClass("sel");
+        button.siblings("button.eventTitle.stroke.sel").removeClass("sel");
         button.addClass("sel");
         button.data("e").updateTitle();
     });
@@ -114,7 +114,7 @@ function attachClickHandlers(season){
             if (meet.ISMeet !== "A Meet"){
                 meet.ISMeet.events.forEach(event => {
                     if (button.data("distance") == event.distance && button.data("stroke") == event.stroke){
-                        event.swimmers.push[swimmer];
+                        meet.ISMeet.seedEntry(entry, event);
                     }
                 });
             }
@@ -154,7 +154,7 @@ function attachKeyHandlers(){
 
     right.on("keyup", "input.var", function(e){
         let input = $(this);
-        //input.data("obj")[input.data("prop")] = input.val();
+        input.data("obj")[input.data("prop")] = input.val();
         input.setVar(input.val());
     });
     /*
