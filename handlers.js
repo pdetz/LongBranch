@@ -5,6 +5,11 @@ function attachClickHandlers(season){
         e.stopImmediatePropagation();
         $(this).data("onclick").call();
     });
+
+    $("#right").on("click", "button.lane.name", function(e){
+        let button = $(this);
+        console.log(button);
+    });
     
     $("#right").on("click", "button.eventTitle.distance", function(e){
         e.stopImmediatePropagation();

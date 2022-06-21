@@ -24,16 +24,65 @@ function intrasquad(season, meet, events){
 
 ISMeet.prototype.seedEntry = function(entry, event){
     console.log(entry, event);
+    let laneOrder = [3, 2, 4, 1, 5, 0];
+
+    let seeded = false; let h = 0; let l = 0;
+
+    while (!seeded && h < event.heats.length){
+        let heat = event.heats[h];
+        while (!seeded && l < 6){
+            let lane = heat.lanes[laneOrder[l]];
+            if (lane.swimmer == NO_SWIMMER) {
+                entry.heat = h;
+                entry.lane = l;
+                lane.seedLane(entry.swimmer);
+                console.log(lane);
+                seeded = true;
+            }
+            l++;
+        }
+        l = 0;
+        h++;
+    }
 }
 
+function Lane(event, heat, swimmer, n){
+    this.n = n + 1;
+    this.event = event;
+    this.heat = heat;
+    this.swimmer = swimmer;
+    this.lane = make("div.lane").append(this.n, ".");
+    this.button = make("button.lane.name").html(swimmer.display()).data("lane", this);
+    this.lane.append(this.button);
+}
+
+Lane.prototype.seedLane = function(swimmer){
+    console.log(this.button);
+    this.swimmer = swimmer;
+    this.button.html(swimmer.display());
+    console.log(this.button, "seeded");
+}
+
+Heat.prototype.heatEditor = function(event, season){
+    let heat = this;
+    let editor = make("div.heat").append("Heat ", this.n, " of ", event.heats.length + 1, '<br>');
+    for (l = 0; l < 6; l++){
+        editor.append(heat.lanes[l].lane);
+    };
+    //console.log(editor);
+    return editor;
+}
+
+
+ISEvent.prototype.heatLane = function(heat, lane){
+    return this.heats[heat].lanes[lane];
+}
 
 function newEventButton(events){
     let button = make("button.new").append("New Event");
     button.data("events", events);
     return button;
-
 }
-
 
 function loadIntrasquad(season, meet, events){
     let newMeet = new ISMeet(season, meet, events);
@@ -47,10 +96,6 @@ function ISMeet(season, meet, events){
     events.forEach(event=>{
         let newEvent = new ISEvent(season, events, event);
         this.events.push(newEvent);
-        newEvent.heats = [];
-        for (h = 0; h < event.heats; h++){
-            newEvent.heats.push(new Heat(newEvent, season));
-        }
     });
     //console.log(this.events[0].titleLine);
 }
@@ -120,22 +165,10 @@ function Heat(event, season){
     this.n = event.heats.length + 1;
     this.lanes = [];
     for (let i = 0; i < 6; i++){
-        this.lanes.push(NO_SWIMMER);
+        this.lanes.push(new Lane(event, this, NO_SWIMMER, i));
     }
     this.editor = this.heatEditor(event, season);
     //console.log(this.lanes);
 }
 
-
-Heat.prototype.heatEditor = function(event, season){
-    let heat = this;
-    let editor = make("div.heat").append("Heat ", this.n, " of ", event.heats.length + 1, '<br>');
-    for(l = 0; l < 6; l++){
-        let lane = make("div.lane").append(l+1, ".");
-        let name = make("button.lane.name").append(heat.lanes[l].display());
-        editor.append(lane.append(name));
-    };
-    //console.log(editor);
-    return editor;
-}
 
