@@ -59,7 +59,7 @@ button.lane.name {
     font-size: 10pt;
     padding: 2px 4px;
     margin-left: 8pt;
-    width:120pt;
+    width:132pt;
     text-align: left;
 }
 
@@ -87,4 +87,11 @@ button.eventTitle {
 div.eventTitle{
     font-weight:bold;
     margin-bottom:0.5em;
+}
+
+div.empty{
+    text-align: center;
+    color: #abe;
+    font-style: italic;
+    min-height: 10pt;
 }

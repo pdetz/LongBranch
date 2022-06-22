@@ -105,4 +105,8 @@
     button.eventTitle.sel.strokeName{
         display:inline;
     }
+    div.empty{
+        color:#fff;
+        border-bottom: 1px solid black;
+    }
 }

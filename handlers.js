@@ -4,11 +4,28 @@ function attachClickHandlers(season){
     body.on("click", "button.menu", function(e){
         e.stopImmediatePropagation();
         $(this).data("onclick").call();
+
     });
 
     $("#right").on("click", "button.lane.name", function(e){
         let button = $(this);
+        let lane = button.data("lane");
+        let event = lane.event;
         console.log(button);
+        if (season.selectedLane == ""){
+            season.selectedLane = button.data("lane");
+            button.addClass("sel");
+        }
+        else if (season.selectedLane == lane){
+            season.selectedLane = "";
+            button.removeClass("sel");
+        }
+        else if (season.selectedLane !== lane){
+            swap(season.selectedLane, lane);
+            season.selectedLane.button.removeClass("sel");
+            season.selectedLane = "";
+            button.removeClass("sel");
+        }
     });
     
     $("#right").on("click", "button.eventTitle.distance", function(e){
@@ -107,14 +124,17 @@ function attachClickHandlers(season){
             else if (KEYPRESSED == 50 || KEYPRESSED == 98){
                 button.append("25");
                 button.data("distance","25M");
+                console.log("50M");
             }
             else if (KEYPRESSED == 53 || KEYPRESSED == 101){
                 button.append("50");
                 button.data("distance","50M");
+                console.log("50M");
             }
             else if (KEYPRESSED == 49 || KEYPRESSED == 97){
                 button.append("100");
                 button.data("distance","100M");
+
             }
             if (meet.ISMeet !== "A Meet"){
                 meet.ISMeet.events.forEach(event => {

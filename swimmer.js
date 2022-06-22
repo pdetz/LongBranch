@@ -10,16 +10,33 @@ function Swimmer(swimmer){
 
     //this.age = age;
     this.age = age(this.dob, "06012022");
-    this.display = function(){
-        let disp = this.apellido + ", ";
+    let name = this.apellido + ", ";
+    this.nicknames = function(){
+        let name = this.apellido + ", ";
         if (this.nickname == ""){
-            disp += this.nombre;
+            name += this.nombre;
         }
         else{
-            disp += this.nickname;
+            name += this.nickname;
         }
-        return disp + " " + this.age;
+        return name;
     }
+    this.display = function(){
+        let disp = this.nicknames() + " " + this.age;
+        return disp;
+    }
+
+}
+
+Swimmer.prototype.nicknames = function(){
+    let name = this.apellido + ", ";
+    if (this.nickname == ""){
+        name += this.nombre;
+    }
+    else{
+        name += this.nickname;
+    }
+    return name;
 }
 
 function SavedSwimmer(swimmer){
@@ -53,8 +70,8 @@ function EMPTY(){
     this.nombre = "";
     this.apellido = "";
     this.nickname = "";
-    this.display = function(){
-        return "aja querida";
+    this.nicknames = function(){
+        return make("div.empty").html(" ");
     }
 }
 

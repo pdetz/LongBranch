@@ -83,9 +83,11 @@ function Entry(entry, meet, roster){
     //this.swimmer = entry.swimmer;
     this.swimmer = roster[entry.swimmer];
     this.time = entry.t;
-    this.heat = "";
-    this.lane = "";
+    this.heat = entry.heat;
+    this.lane = entry.lane;
+    this.n = entry.n;
     this.button = "";
+    this.heatLane = "";
 }
 
 function SavedEntry(entry, meet, roster){
@@ -94,9 +96,16 @@ function SavedEntry(entry, meet, roster){
     this.time = entry.t;
     this.heat = entry.heat;
     this.lane = entry.lane;
+    if (meet.ISMeet !== "A Meet"){
+        this.n = entry.n;
+    }
 }
 
 Entry.prototype.removeEntry = function() {
+    if (this.heatLane !== ""){
+        this.heatLane.seedLane(NO_SWIMMER);
+        this.heatLane.entry = "";
+    }
     let entries = this.meet.entries;
     let index = entries.indexOf(this);
     console.log(this);

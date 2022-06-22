@@ -1,5 +1,6 @@
 function Season(season){
     this.roster = []; // array of Swimmers
+    this.selectedLane = "";
     
     season.roster.sort(compareNames);
 
