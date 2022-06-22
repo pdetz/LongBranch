@@ -32,7 +32,6 @@ button.entries svg{
 }
 
 div.builder {
-    border: 1px solid black;
     padding: 4px;
     margin: 4px;
     text-align:left;
@@ -93,5 +92,51 @@ div.empty{
     text-align: center;
     color: #abe;
     font-style: italic;
-    min-height: 10pt;
+    min-height: 12pt;
+}
+
+div.timers{
+    text-align:left;
+}
+div.laneSheet{
+    display:block;
+}
+
+div.timerTitle{
+    font-size:12pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.timers.heat{
+    display:block;
+    margin-bottom: 8pt;
+}
+
+div.timerLine{
+    min-width:80pt;
+    display:inline-block;
+    height: 18pt;
+    margin:0 4pt;
+    color: #fff;
+    border-bottom:1px solid black;
+}
+
+div.timerLine:first-child{
+    padding-left: 20pt;
+}
+span.timers.name{
+    display:inline-block;
+
+    min-width: 140pt;
+    margin-right:20pt;
+    border-bottom:1px solid black;
+}
+
+button.red{
+    background-color: red;
+}
+
+button.blue{
+    background-color: blue;
 }

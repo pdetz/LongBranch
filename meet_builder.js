@@ -12,15 +12,37 @@ function meetBuilder(season){
     console.log(meet, meet.entries);
 
     meet.meet.entries.forEach(entry =>{
-        console.log(entry.heat, entry.n);
-        console.log(entry.button);
         entry.button.html(meet.events[entry.n-1].distance.slice(0, -1));
         meet.seedEntry(entry, meet.events[entry.n-1]);
     });
 
-    console.log("meet builder");
+
+    for (let lane = 0; lane < 6; lane++){
+        let timerSheet = make("div.laneSheet");
+        timerSheet.append(make("div.timerTitle").append("Lane ", lane+1));
+        //console.log(timerSheet);
+        meet.events.forEach(event=>{
+            let e = make("div.timers.event").html(event.titleLine.html());
+            event.heats.forEach(heat=>{
+                let h = make("div.timers.heat");
+                let name = make("span.timers.name")
+                            .append(NO_SWIMMER.nicknames());
+                            //.append(event.heatLane(heat.n-1, lane).swimmer.nicknames());
+                h.append("Heat ", heat.n, ": ", name)
+                 .append(timerLine(), timerLine(), timerLine());
+                e.append(h);
+            });
+            timerSheet.append(e);
+        });
+        builder.append(timerSheet);
+    }
 
     return builder;
+}
+
+function timerLine(){
+    let l = make("div.timerLine");//.append("test");
+    return l;
 }
 
 function intrasquad(season, meet, events){
@@ -31,10 +53,9 @@ function intrasquad(season, meet, events){
     return newMeet;
 }
 
-ISMeet.prototype.seedEntry = function(entry, event){
+ISMeet.prototype.seedEntry = function(entry, event, boltButton){
     console.log(entry, event);
     let laneOrder = [3, 2, 4, 1, 5, 0];
-
     let seeded = false; let h = 0; let l = 0;
 while (!seeded){
     while (!seeded && h < event.heats.length){
@@ -49,6 +70,7 @@ while (!seeded){
                 lane.seedLane(entry.swimmer);
                 lane.entry = entry;
                 seeded = true;
+                lane.boltbutton
             }
             l++;
         }
@@ -63,6 +85,13 @@ while (!seeded){
 }
 }
 
+Lane.prototype.seedLane = function(swimmer){
+    console.log(this.button);
+    this.swimmer = swimmer;
+    this.button.html(swimmer.nicknames());
+    console.log(this.button, "seeded");
+}
+
 function Lane(event, heat, swimmer, n){
     this.n = n + 1;
     this.event = event;
@@ -75,20 +104,53 @@ function Lane(event, heat, swimmer, n){
 }
 
 function swap(lane1, lane2){
-    console.log(lane1, lane2);
-    let lane1Swimmer = lane1.swimmer;
-    let lane2Swimmer = lane2.swimmer;
-    console.log(lane1Swimmer, lane2Swimmer);
+    console.log("SWAP");
+    console.log(lane1.entry.button);
     
-    lane1.seedLane(lane2Swimmer);
-    lane2.seedLane(lane1Swimmer);
-}
+    let entry1 = lane1.entry;
+    let entry2 = lane2.entry;
 
-Lane.prototype.seedLane = function(swimmer){
-    console.log(this.button);
-    this.swimmer = swimmer;
-    this.button.html(swimmer.nicknames());
-    console.log(this.button, "seeded");
+    let swimmer1 = lane1.swimmer;
+    let swimmer2 = lane2.swimmer;
+
+    console.log(swimmer1.nombre, swimmer2.nombre);
+
+    if (entry1 !== "" && entry2 !== ""){
+        entry1.button.data("entry", entry2);
+        entry2.button.data("entry", entry1);
+
+        let holdButton = entry1.button;
+        entry1.button = entry2.button;
+        entry2.button = holdButton;
+        
+        //lane1.entry = entry2;
+        //lane2.entry = entry1;
+
+        lane1.swimmer = swimmer2;
+        lane2.swimmer = swimmer1;
+        
+        entry1.button.data("entry").swimmer = swimmer2;
+        console.log(swimmer2.nombre);
+        entry2.button.data("entry").swimmer = swimmer1;
+        console.log(swimmer1.nombre);
+
+        entry1.button.html("h" + entry1.button.data("entry").heat + "l" + entry1.button.data("entry").lane);
+        entry2.button.html("h" + entry2.button.data("entry").heat + "l" + entry2.button.data("entry").lane);
+        entry1.button.html(entry1.button.data("entry").swimmer.nombre);
+        entry2.button.html(entry2.button.data("entry").swimmer.nombre);
+    }
+    if (entry1 == ""){
+        
+    }
+
+    //console.log(lane1.entry.swimmer.nombre, lane2.entry.swimmer.nombre);
+
+    //lane1.swimmer = lane2Swimmer;
+    //lane2.swimmer = lane1Swimmer;
+    
+    lane1.seedLane(swimmer2);
+    lane2.seedLane(swimmer1);
+
 }
 
 Heat.prototype.heatEditor = function(event){
@@ -100,7 +162,6 @@ Heat.prototype.heatEditor = function(event){
     //console.log(editor);
     return editor;
 }
-
 
 ISEvent.prototype.heatLane = function(heat, lane){
     return this.heats[heat].lanes[lane];
@@ -145,7 +206,7 @@ function ISEvent(season, events, event){
 
 ISEvent.prototype.eventEditor = function(season, events){
     let eventSelector = make("div.noprint");
-    let editor =  make("div.builder").append(eventSelector);
+    let editor =  make("div.builder"); //.append(eventSelector);
 
     let ages = [_10U, _OPEN];
     for (a = 0; a < 2; a++){

@@ -107,6 +107,22 @@
     }
     div.empty{
         color:#fff;
+        width: 140pt;
         border-bottom: 1px solid black;
+    }
+    div.heat{
+        page-break-inside: avoid;
+    }
+    div.laneSheet{
+        page-break-before: always;
+    }
+    div.timers.event{
+        page-break-inside: avoid;
+    }
+    div.editor{
+        float:none;
+    }
+    div.builder{
+        page-break-inside: avoid;
     }
 }

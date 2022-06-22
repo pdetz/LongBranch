@@ -11,7 +11,7 @@ function attachClickHandlers(season){
         let button = $(this);
         let lane = button.data("lane");
         let event = lane.event;
-        console.log(button);
+        console.log(button.data("lane").swimmer.nombre);
         if (season.selectedLane == ""){
             season.selectedLane = button.data("lane");
             button.addClass("sel");
@@ -139,7 +139,8 @@ function attachClickHandlers(season){
             if (meet.ISMeet !== "A Meet"){
                 meet.ISMeet.events.forEach(event => {
                     if (button.data("distance") == event.distance && button.data("stroke") == event.stroke){
-                        meet.ISMeet.seedEntry(entry, event);
+                        meet.ISMeet.seedEntry(entry, event, button);
+                        button.html("h" + entry.heat + "l" + entry.lane);
                     }
                 });
             }
