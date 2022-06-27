@@ -8,19 +8,19 @@ function meetBuilder(season){
     meet.events.forEach(event =>{
         builder.append(event.editor);//.append(newEventButton(meet.events));
     });
-
-    console.log(meet, meet.entries);
+    loadTimerSheets(meet, builder);
 
     meet.meet.entries.forEach(entry =>{
         entry.button.html(meet.events[entry.n-1].distance.slice(0, -1));
         meet.seedEntry(entry, meet.events[entry.n-1]);
     });
+    return builder;
+}
 
-
+function loadTimerSheets(meet, timerSheets){
     for (let lane = 0; lane < 6; lane++){
         let timerSheet = make("div.laneSheet");
         timerSheet.append(make("div.timerTitle").append("Lane ", lane+1));
-        //console.log(timerSheet);
         meet.events.forEach(event=>{
             let e = make("div.timers.event").html(event.titleLine.html());
             event.heats.forEach(heat=>{
@@ -30,14 +30,18 @@ function meetBuilder(season){
                             //.append(event.heatLane(heat.n-1, lane).swimmer.nicknames());
                 h.append("Heat ", heat.n, ": ", name)
                  .append(timerLine(), timerLine(), timerLine());
+                event.heatLane(heat.n-1, lane).name = name;
                 e.append(h);
             });
             timerSheet.append(e);
         });
-        builder.append(timerSheet);
+        timerSheets.append(timerSheet);
     }
+    return timerSheets;
+}
 
-    return builder;
+Lane.prototype.updateTimerSheet = function(){
+    this.name.html(this.swimmer.nicknames());    
 }
 
 function timerLine(){
@@ -53,8 +57,7 @@ function intrasquad(season, meet, events){
     return newMeet;
 }
 
-ISMeet.prototype.seedEntry = function(entry, event, boltButton){
-    console.log(entry, event);
+ISMeet.prototype.seedEntry = function(entry, event){
     let laneOrder = [3, 2, 4, 1, 5, 0];
     let seeded = false; let h = 0; let l = 0;
 while (!seeded){
@@ -70,7 +73,7 @@ while (!seeded){
                 lane.seedLane(entry.swimmer);
                 lane.entry = entry;
                 seeded = true;
-                lane.boltbutton
+                //lane.append(entry.button);
             }
             l++;
         }
@@ -86,10 +89,9 @@ while (!seeded){
 }
 
 Lane.prototype.seedLane = function(swimmer){
-    console.log(this.button);
     this.swimmer = swimmer;
     this.button.html(swimmer.nicknames());
-    console.log(this.button, "seeded");
+    this.updateTimerSheet();
 }
 
 function Lane(event, heat, swimmer, n){
@@ -104,7 +106,6 @@ function Lane(event, heat, swimmer, n){
 }
 
 function swap(lane1, lane2){
-    console.log("SWAP");
     console.log(lane1.entry.button);
     
     let entry1 = lane1.entry;
@@ -130,9 +131,7 @@ function swap(lane1, lane2){
         lane2.swimmer = swimmer1;
         
         entry1.button.data("entry").swimmer = swimmer2;
-        console.log(swimmer2.nombre);
         entry2.button.data("entry").swimmer = swimmer1;
-        console.log(swimmer1.nombre);
 
         entry1.button.html("h" + entry1.button.data("entry").heat + "l" + entry1.button.data("entry").lane);
         entry2.button.html("h" + entry2.button.data("entry").heat + "l" + entry2.button.data("entry").lane);
@@ -143,14 +142,11 @@ function swap(lane1, lane2){
         
     }
 
-    //console.log(lane1.entry.swimmer.nombre, lane2.entry.swimmer.nombre);
-
     //lane1.swimmer = lane2Swimmer;
     //lane2.swimmer = lane1Swimmer;
     
     lane1.seedLane(swimmer2);
     lane2.seedLane(swimmer1);
-
 }
 
 Heat.prototype.heatEditor = function(event){
@@ -159,7 +155,6 @@ Heat.prototype.heatEditor = function(event){
     for (l = 0; l < 6; l++){
         editor.append(heat.lanes[l].lane);
     };
-    //console.log(editor);
     return editor;
 }
 
@@ -245,7 +240,6 @@ ISEvent.prototype.eventEditor = function(season, events){
 
 ISEvent.prototype.updateTitle = function(){
     let eventNumber = make("span.eventNumber").html(this.n);
-    console.log(this.titleLine);
     this.titleLine.html("Event ").append(eventNumber, ". ", this.ageGroup.name, " ", this.distance, " ", this.stroke.name);
 }
 
@@ -257,7 +251,6 @@ function Heat(event){
         this.lanes.push(new Lane(event, this, NO_SWIMMER, i));
     }
     this.editor = this.heatEditor(event);
-    //console.log(this.lanes);
 }
 
 

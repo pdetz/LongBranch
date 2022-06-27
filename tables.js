@@ -55,7 +55,6 @@ Season.prototype.lineupTable = function(ag, gender, meet){
         let stroke = STROKES[i];
         //td.html(ag);
         events.forEach(e=>{
-            //console.log(e);
             if (e.stroke == stroke && e.gender == gender && ageMatch(ageGroup, e.ageGroup)){
                 td.html(e.n);
                 eventNumbers.push(events.indexOf(e));
@@ -68,14 +67,13 @@ Season.prototype.lineupTable = function(ag, gender, meet){
     swimmers.forEach(swimmer =>{
         tbody.append(season.swimmerRow(swimmer, meet, eventNumbers));
     });
-
-    //console.log(swimmers);
     return table.append(tbody);
 }
 
 Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
     let tr = make("tr" + swimmerRowID(swimmer, meet))  
         .append(make("td").html(swimmer.display()));
+        
     for (let i = 0; i < 5; i++){
         let bolt = make("button.bolt") //.html(BOLT)
             .data("swimmer", swimmer)
@@ -86,8 +84,9 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
             if (entry.swimmer == swimmer && entry.e == meet.type.events[eventNumbers[i]]){
                 bolt.addClass("entry")
                     .data("entry", entry)
-                    .html(BOLT);
+                    .html(entry.time);
                 entry.button = bolt;
+                //console.log(entry.button);
             }
         });
     }

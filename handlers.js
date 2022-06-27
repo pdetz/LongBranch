@@ -80,14 +80,12 @@ function attachClickHandlers(season){
             editor.show();
             $("button.editor.sel").removeClass("sel");
             button.toggleClass("sel");
-            console.log(editor);
         };
     });   
 
     $('#right').on("click", "button.top.entries", function(e){
         e.stopImmediatePropagation();
             let button = $(this);
-            console.log(button);
             button.parent().children("input.entries").click();
     });
         
@@ -139,7 +137,7 @@ function attachClickHandlers(season){
             if (meet.ISMeet !== "A Meet"){
                 meet.ISMeet.events.forEach(event => {
                     if (button.data("distance") == event.distance && button.data("stroke") == event.stroke){
-                        meet.ISMeet.seedEntry(entry, event, button);
+                        meet.ISMeet.seedEntry(entry, event);
                         button.html("h" + entry.heat + "l" + entry.lane);
                     }
                 });

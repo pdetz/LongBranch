@@ -4,7 +4,7 @@ function Swimmer(swimmer){
     this.apellido = swimmer.apellido;
     this.nickname = swimmer.nickname;
     this.gender = swimmer.gender;
-    this.id = swimmer.id;
+    this.id = swimmer.id.slice(-14);
     this.address = swimmer.address;
     this.zip = swimmer.zip;
 

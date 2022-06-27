@@ -19,7 +19,6 @@ function Meet(meet, season){
     }
     this.entries = [];
 
-   console.log(this.ISMeet);
     meet.entries.forEach(entry => {
         thisMeet.entries.push(new Entry(entry, thisMeet, season.roster));
     }); // array of Entries
@@ -86,7 +85,7 @@ function Entry(entry, meet, roster){
     this.heat = entry.heat;
     this.lane = entry.lane;
     this.n = entry.n;
-    this.button = "";
+    this.button = make("button.bolt");
     this.heatLane = "";
 }
 
@@ -117,9 +116,10 @@ Entry.prototype.removeEntry = function() {
 function newEntry(meet, e, swimmer, t){
     let entry = {
         e: e,
-        swimmer: 0,
+        //swimmer: swimmer,
         t: t
     }
+    console.log(t);
     let newE = new Entry(entry, meet, "[{}]");
     newE.swimmer = swimmer;
     return newE;

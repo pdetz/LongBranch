@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
     let season = new Season(LBWW22);
 
@@ -9,8 +6,6 @@ $(document).ready(function(){
     loadLeftBar(season);
     loadRightBar(season);
 
-    console.log(season.currentMeet);
-    //console.log(currentMeet.title);
     document.title = season.currentMeet.title.html();
     $("#right").append(season.editors[2].editor);
 
@@ -20,7 +15,6 @@ $(document).ready(function(){
 
 function clearSeasonEntries(season){
     season.meets.forEach(meet =>{
-        console.log(meet.name);
         meet.entries = [];
     });
 
@@ -32,8 +26,6 @@ function tempseason() {
     meetNames.forEach(meet => {
         season.meets.push(new Meet(meet, 0, "Long Branch", "8700 Piney Branch Rd", "", "8:00 AM"));
     });
-
-    //console.log(JSON.stringify(season));
 
     return season;
 }

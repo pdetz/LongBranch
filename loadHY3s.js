@@ -22,24 +22,27 @@ function loadEntries(uploadedFile, season, meet){
 
         let entries = athlete.split('\n');
 
-        const id = entries.shift().slice(66, 81).trim();
-        console.log(id);
+        let id = entries.shift().slice(67, 81).trim();
+        //console.log(id);
         let entrySwimmer = "";
+        let s = 0; let swimmerIndex = -1;
 
-        season.roster.forEach(swimmer =>{
+        for (let swimmer of season.roster){
+        //season.roster.forEach(swimmer =>{
             if (swimmer.id == id) {
                 entrySwimmer = swimmer;
+                swimmerIndex = s;
+                console.log(s);
+                break;
             }
-        });
+            s++;
+        };
 
         entries.forEach(hy3Entry =>{
-            console.log(hy3Entry);
             let e = parseInt(hy3Entry.slice(39, 41).trim());
             let t = parseFloat(hy3Entry.slice(44, 51).trim());
             meet.entries.push(newEntry(meet, e-1, entrySwimmer, t));
-            console.log(e, t);
         });
-        console.log(entrySwimmer, entries);
     });
 
 
