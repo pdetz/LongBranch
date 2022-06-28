@@ -69,20 +69,25 @@ function loadRoster(uploadedFile, season, meet){
                     zip: lines[1].slice(94, 99)
                 };
 
-                roster.push(new Swimmer(swimmer));
+                let onRoster = false;
+                season.roster.forEach(rosterSwimmer =>{
+                    if (rosterSwimmer.isSwimmer(swimmer)) onRoster = true;
+                });
+
+                if (!onRoster) season.roster.push(new Swimmer(swimmer));
 
             });    
-            season.roster = roster;
+            //season.roster = roster;
 
             $("table.roster").remove();
 
             season.meets.forEach(meet =>{
-                meet.lineup.append("testing");
                 meet.lineup.empty();
             });
             //$(".meet_lineup").remove();
             loadTables(season);
 }
+
 
 function upperCaseName(name){
     return name.charAt(0).toUpperCase() + name.slice(1);

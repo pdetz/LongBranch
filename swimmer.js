@@ -65,6 +65,12 @@ Swimmer.prototype.isAge = function(ageGroup){
     return is;
 }
 
+Swimmer.prototype.isSwimmer = function(swimmer){
+    let is = (this.id == swimmer.id);
+    if (!is && this.nombre == swimmer.nombre && this.apellido == swimmer.apellido && this.dob == swimmer.dob) is = true;
+    return is;
+}
+
 function EMPTY(){
     this.dob = "";
     this.nombre = "";
