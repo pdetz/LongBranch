@@ -11,6 +11,7 @@ function loadEditors(season) {
     season.editors.push(new Editor("Meets", meetEditor(season)));
     season.editors.push(new Editor("Roster", rosterEditor(season)));
     season.editors.push(new Editor("Meet Builder", meetBuilder(season)));
+    season.editors.push(new Editor("Relay Builder", meetBuilder(season)));
     
     //console.log(season.editors);
     

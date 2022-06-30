@@ -12,7 +12,7 @@ function meetBuilder(season){
 
     meet.meet.entries.forEach(entry =>{
         entry.button.html(meet.events[entry.n-1].distance.slice(0, -1));
-        meet.seedEntry(entry, meet.events[entry.n-1]);
+        //meet.seedEntry(entry, meet.events[entry.n-1]);
     });
     return builder;
 }
