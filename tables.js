@@ -84,7 +84,7 @@ Season.prototype.swimmerRow = function(swimmer, meet, eventNumbers){
             if (entry.swimmer == swimmer && entry.e == meet.type.events[eventNumbers[i]]){
                 bolt.addClass("entry")
                     .data("entry", entry)
-                    .html(BOLT);
+                    .html(entry.time);
                 entry.button = bolt;
                 //console.log(entry.button);
             }

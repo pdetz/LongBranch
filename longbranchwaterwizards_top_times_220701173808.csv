@@ -1,0 +1,356 @@
+age_group,distance,stroke,place,converted_time,converted_hundredths,original_time,last_name,first_name,age,team_abbr,team_name,date,swim_meet
+Girls 8 & Under,25,Freestyle,1,27.59S,2759,27.59S,Young,Anna,6,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 8 & Under,25,Freestyle,2,30.44S,3044,30.44S,Weintraub,Hannah,7,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 8 & Under,25,Freestyle,3,35.14S,3514,35.14S,Moreno,Emma,6,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Freestyle,4,35.69S,3569,35.69S,Carballo-Naranjo,Reina,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Freestyle,5,35.73S,3573,35.73S,Dintaman,Sydney,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Freestyle,6,37.63S,3763,37.63S,Belay,faith,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Freestyle,7,39.68S,3968,39.68S,Lowinger,Khloe,8,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 8 & Under,25,Freestyle,8,51.37S,5137,51.37S,Reyes-Alfaro,Janelle,6,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 8 & Under,25,Backstroke,1,31.03S,3103,31.03S,Young,Anna,6,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 8 & Under,25,Backstroke,2,34.05S,3405,34.05S,Weintraub,Hannah,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Backstroke,3,36.91S,3691,36.91S,Moreno,Emma,6,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Backstroke,4,44.83S,4483,44.83S,Carballo-Naranjo,Reina,8,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 8 & Under,25,Backstroke,5,45.45S,4545,45.45S,Dintaman,Sydney,7,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 8 & Under,25,Backstroke,6,51.63S,5163,51.63S,Reyes-Alfaro,Janelle,6,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 8 & Under,25,Backstroke,7,55.44S,5544,55.44S,Lowinger,Khloe,8,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 8 & Under,25,Backstroke,8,57.27S,5727,57.27S,Belay,faith,8,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 8 & Under,25,Breaststroke,1,33.88S,3388,33.88S,Belay,faith,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Breaststroke,2,47.21S,4721,47.21S,Weintraub,Hannah,7,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 8 & Under,25,Breaststroke,3,51.53S,5153,51.53S,Young,Anna,6,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 8 & Under,25,Breaststroke,4,56.07S,5607,56.07S,Moreno,Emma,6,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 8 & Under,25,Butterfly,1,38.15S,3815,38.15S,Weintraub,Hannah,7,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 8 & Under,25,Butterfly,2,41.77S,4177,41.77S,Belay,faith,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 8 & Under,25,Butterfly,3,1:01.39S,6139,1:01.39S,Moreno,Emma,6,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 8 & Under,25,Freestyle,1,22.90S,2290,22.90S,Rivera,Juan Angel,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Freestyle,2,28.90S,2890,28.90S,Blenkinsop,Kailen,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Freestyle,3,29.00S,2900,29.00S,Fuentes,Eric,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Freestyle,4,33.00S,3300,33.00S,Dintaman,Elias,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Freestyle,5,43.77S,4377,43.77S,Greenberg,Nathaniel,8,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Boys 8 & Under,25,Backstroke,1,31.59S,3159,31.59S,Rivera,Juan Angel,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Backstroke,2,34.40S,3440,34.40S,Blenkinsop,Kailen,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Backstroke,3,37.34S,3734,37.34S,Fuentes,Eric,7,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 8 & Under,25,Backstroke,4,1:12.78S,7278,1:12.78S,Greenberg,Nathaniel,8,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Boys 8 & Under,25,Breaststroke,1,56.71S,5671,56.71S,Fuentes,Eric,7,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 8 & Under,25,Butterfly,1,30.09S,3009,30.09S,Rivera,Juan Angel,8,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,50,Freestyle,1,49.09S,4909,49.09S,Hinderstein,Mila,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,50,Freestyle,2,50.33S,5033,50.33S,Chacon,Alexandra,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,50,Freestyle,3,52.76S,5276,52.76S,Ramachandran,Anushka,10,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 9-10,50,Freestyle,4,53.69S,5369,53.69S,Brown,Gwyneth,10,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,50,Freestyle,5,54.84S,5484,54.84S,Argueta,Eliana,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,50,Freestyle,6,56.39S,5639,56.39S,Lawson,Carol,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,50,Freestyle,7,58.26S,5826,58.26S,Sunderland,Dara,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,50,Freestyle,8,1:01.32S,6132,1:01.32S,Forshey,Georgia,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,50,Freestyle,9,1:01.56S,6156,1:01.56S,Fuentes,Jennifer,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,50,Freestyle,10,1:01.89S,6189,1:01.89S,Hernandez,Fatima,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,50,Freestyle,11,1:05.50S,6550,1:05.50S,LeBlanc,Penelope,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,50,Freestyle,12,1:05.88S,6588,1:05.88S,Lopez,Angelinda,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,50,Freestyle,13,1:11.68S,7168,1:11.68S,Theisman,Nell,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,50,Freestyle,14,1:30.81S,9081,1:30.81S,Reyes-Alfaro,Jezebel,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Backstroke,1,23.55S,2355,23.55S,Brown,Gwyneth,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Backstroke,2,26.57S,2657,26.57S,Argueta,Eliana,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 9-10,25,Backstroke,3,28.56S,2856,28.56S,Sunderland,Dara,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,25,Backstroke,4,30.69S,3069,30.69S,Hinderstein,Mila,10,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Backstroke,5,31.22S,3122,31.22S,Lawson,Carol,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Backstroke,6,31.23S,3123,31.23S,Ramachandran,Anushka,10,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 9-10,25,Backstroke,7,32.80S,3280,32.80S,Hernandez,Fatima,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Backstroke,8,34.01S,3401,34.01S,Theisman,Nell,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Backstroke,9,34.19S,3419,34.19S,Chacon,Alexandra,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Backstroke,10,34.25S,3425,34.25S,LeBlanc,Penelope,10,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,25,Backstroke,11,34.97S,3497,34.97S,Forshey,Georgia,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Backstroke,12,35.62S,3562,35.62S,Lopez,Angelinda,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,25,Backstroke,13,36.83S,3683,36.83S,Fuentes,Jennifer,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Backstroke,14,45.91S,4591,45.91S,Reyes-Alfaro,Jezebel,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,25,Breaststroke,1,29.74S,2974,29.74S,Hinderstein,Mila,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Breaststroke,2,32.37S,3237,32.37S,Lawson,Carol,10,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 9-10,25,Breaststroke,3,33.06S,3306,33.06S,Ramachandran,Anushka,10,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 9-10,25,Breaststroke,4,34.03S,3403,34.03S,Chacon,Alexandra,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Breaststroke,5,36.75S,3675,36.75S,Brown,Gwyneth,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Breaststroke,6,38.77S,3877,38.77S,Forshey,Georgia,10,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Breaststroke,7,39.38S,3938,39.38S,Argueta,Eliana,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Breaststroke,8,40.03S,4003,40.03S,Fuentes,Jennifer,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Breaststroke,9,45.76S,4576,45.76S,Sunderland,Dara,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Breaststroke,10,52.09S,5209,52.09S,Reyes-Alfaro,Jezebel,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Butterfly,1,27.08S,2708,27.08S,Hinderstein,Mila,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Butterfly,2,28.69S,2869,28.69S,Lawson,Carol,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 9-10,25,Butterfly,3,31.88S,3188,31.88S,Ramachandran,Anushka,10,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 9-10,25,Butterfly,4,37.16S,3716,37.16S,Argueta,Eliana,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 9-10,25,Butterfly,5,44.47S,4447,44.47S,Forshey,Georgia,10,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 9-10,25,Butterfly,6,46.84S,4684,46.84S,Theisman,Nell,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 9-10,50,Freestyle,1,44.24S,4424,44.24S,Blenkinsop,Wesley,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,50,Freestyle,2,53.71S,5371,53.71S,Davidson,Max,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,50,Freestyle,3,59.46S,5946,59.46S,Dixon,Alexnder,10,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 9-10,50,Freestyle,4,1:02.15S,6215,1:02.15S,Nellis,Sean,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,50,Freestyle,5,1:08.46S,6846,1:08.46S,Weintraub,Logan,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,50,Freestyle,6,1:13.51S,7351,1:13.51S,Bellows,Michael,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Backstroke,1,26.40S,2640,26.40S,Blenkinsop,Wesley,10,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,25,Backstroke,2,30.64S,3064,30.64S,Dixon,Alexnder,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 9-10,25,Backstroke,3,31.25S,3125,31.25S,Davidson,Max,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,25,Backstroke,4,33.22S,3322,33.22S,Weintraub,Logan,9,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 9-10,25,Backstroke,5,36.45S,3645,36.45S,Bellows,Michael,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Backstroke,6,41.95S,4195,41.95S,Nellis,Sean,9,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Boys 9-10,25,Breaststroke,1,28.64S,2864,28.64S,Blenkinsop,Wesley,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 9-10,25,Breaststroke,2,30.45S,3045,30.45S,Dixon,Alexnder,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Breaststroke,3,30.83S,3083,30.83S,Weintraub,Logan,9,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 9-10,25,Breaststroke,4,34.34S,3434,34.34S,Bellows,Michael,9,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Breaststroke,5,39.31S,3931,39.31S,Davidson,Max,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 9-10,25,Butterfly,1,26.38S,2638,26.38S,Blenkinsop,Wesley,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Butterfly,2,31.46S,3146,31.46S,Dixon,Alexnder,10,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 9-10,25,Butterfly,3,42.21S,4221,42.21S,Weintraub,Logan,9,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 12 & Under,100,Individual Medley,1,1:27.91S,8791,1:27.91S,Patel,Sarisha,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 12 & Under,100,Individual Medley,2,1:35.87S,9587,1:35.87S,Nellis,Alanna,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 12 & Under,100,Individual Medley,3,1:43.82S,10382,1:43.82S,Minalu,Kalkidan,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 12 & Under,100,Individual Medley,4,1:49.19S,10919,1:49.19S,Chacon,Genesis,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 12 & Under,100,Individual Medley,5,1:49.63S,10963,1:49.63S,Bellows,Leena,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 12 & Under,100,Individual Medley,6,1:55.20S,11520,1:55.20S,young,lauren,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 12 & Under,100,Individual Medley,7,1:58.15S,11815,1:58.15S,Ford,Riley,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 12 & Under,100,Individual Medley,8,2:09.09S,12909,2:09.09S,Giebel,Avni,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 12 & Under,100,Individual Medley,9,2:14.47S,13447,2:14.47S,Sorenson,Safiya,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 12 & Under,100,Individual Medley,10,2:49.09S,16909,2:49.09S,Theisman,Stella,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 12 & Under,100,Individual Medley,1,1:11.64S,7164,1:11.64S,Bellows,Michael,9,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 12 & Under,100,Individual Medley,2,1:35.77S,9577,1:35.77S,Degraffinreaidt,Darian,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 12 & Under,100,Individual Medley,3,1:53.39S,11339,1:53.39S,Blenkinsop,Wesley,10,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 12 & Under,100,Individual Medley,4,2:05.12S,12512,2:05.12S,Moreno,Fernando,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 12 & Under,100,Individual Medley,5,2:24.76S,14476,2:24.76S,Oliva  Cardona,Yerik,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 12 & Under,100,Individual Medley,6,2:51.84S,17184,2:51.84S,Greenberg,Benjamin,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Freestyle,1,34.83S,3483,34.83S,Patel,Sarisha,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Freestyle,2,36.88S,3688,36.88S,Nellis,Alanna,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Freestyle,3,38.89S,3889,38.89S,Minalu,Kalkidan,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Freestyle,4,39.16S,3916,39.16S,Chacon,Genesis,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Freestyle,5,40.71S,4071,40.71S,Ford,Riley,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 11-12,50,Freestyle,6,42.90S,4290,42.90S,young,lauren,11,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Freestyle,7,43.21S,4321,43.21S,Bellows,Leena,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Freestyle,8,46.26S,4626,46.26S,Giebel,Avni,11,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Freestyle,9,50.22S,5022,50.22S,Sorenson,Safiya,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Freestyle,10,51.21S,5121,51.21S,Strube,Lailah,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Freestyle,11,56.21S,5621,56.21S,Theisman,Stella,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Freestyle,12,57.56S,5756,57.56S,Carter,Zoe,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Freestyle,13,58.70S,5870,58.70S,Cardona,Estefany,11,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 11-12,50,Backstroke,1,39.45S,3945,39.45S,Patel,Sarisha,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Backstroke,2,44.83S,4483,44.83S,Nellis,Alanna,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Backstroke,3,47.50S,4750,47.50S,Bellows,Leena,12,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Backstroke,4,47.66S,4766,47.66S,young,lauren,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Backstroke,5,50.46S,5046,50.46S,Minalu,Kalkidan,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Backstroke,6,53.76S,5376,53.76S,Ford,Riley,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Backstroke,7,58.34S,5834,58.34S,Chacon,Genesis,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Backstroke,8,1:00.25S,6025,1:00.25S,Sorenson,Safiya,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Backstroke,9,1:00.78S,6078,1:00.78S,Strube,Lailah,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Backstroke,10,1:01.47S,6147,1:01.47S,Giebel,Avni,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Backstroke,11,1:09.08S,6908,1:09.08S,Schleibaum,Coda,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 11-12,50,Backstroke,12,1:10.03S,7003,1:10.03S,Carter,Zoe,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Backstroke,13,1:16.96S,7696,1:16.96S,Theisman,Stella,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Backstroke,14,1:21.13S,8113,1:21.13S,Cardona,Estefany,11,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 11-12,50,Breaststroke,1,47.63S,4763,47.63S,Nellis,Alanna,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Breaststroke,2,49.51S,4951,49.51S,Patel,Sarisha,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Breaststroke,3,53.37S,5337,53.37S,Minalu,Kalkidan,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Breaststroke,4,54.17S,5417,54.17S,Chacon,Genesis,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Breaststroke,5,57.70S,5770,57.70S,Ford,Riley,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 11-12,50,Breaststroke,6,58.08S,5808,58.08S,Bellows,Leena,12,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Breaststroke,7,59.33S,5933,59.33S,Giebel,Avni,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 11-12,50,Breaststroke,8,1:08.82S,6882,1:08.82S,Sorenson,Safiya,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Breaststroke,9,1:13.70S,7370,1:13.70S,young,lauren,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Breaststroke,10,1:25.34S,8534,1:25.34S,Theisman,Stella,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Breaststroke,11,1:41.02S,10102,1:41.02S,Cardona,Estefany,11,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 11-12,50,Butterfly,1,41.20S,4120,41.20S,Patel,Sarisha,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 11-12,50,Butterfly,2,50.13S,5013,50.13S,Minalu,Kalkidan,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Butterfly,3,50.40S,5040,50.40S,Bellows,Leena,12,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 11-12,50,Butterfly,4,51.44S,5144,51.44S,Chacon,Genesis,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 11-12,50,Butterfly,5,56.21S,5621,56.21S,young,lauren,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 11-12,50,Butterfly,6,59.81S,5981,59.81S,Nellis,Alanna,12,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 11-12,50,Butterfly,7,1:10.91S,7091,1:10.91S,Ford,Riley,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Butterfly,8,1:11.14S,7114,1:11.14S,Sorenson,Safiya,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 11-12,50,Butterfly,9,1:16.51S,7651,1:16.51S,Giebel,Avni,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 11-12,50,Freestyle,1,34.88S,3488,34.88S,Degraffinreaidt,Darian,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Freestyle,2,40.02S,4002,40.02S,Oliva  Cardona,Yerik,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 11-12,50,Freestyle,3,45.89S,4589,45.89S,Moreno,Fernando,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Freestyle,4,54.14S,5414,54.14S,Greenberg,Benjamin,11,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 11-12,50,Freestyle,5,1:05.13S,6513,1:05.13S,Nsubuga,Ethan,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 11-12,50,Freestyle,6,1:05.25S,6525,1:05.25S,Gomez,Charly,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 11-12,50,Freestyle,7,1:16.63S,7663,1:16.63S,Lewis,Miles,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Backstroke,1,46.75S,4675,46.75S,Degraffinreaidt,Darian,12,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 11-12,50,Backstroke,2,48.91S,4891,48.91S,Oliva  Cardona,Yerik,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Backstroke,3,56.61S,5661,56.61S,Moreno,Fernando,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Backstroke,4,1:20.76S,8076,1:20.76S,Gomez,Charly,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 11-12,50,Backstroke,5,1:27.87S,8787,1:27.87S,Greenberg,Benjamin,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 11-12,50,Backstroke,6,1:55.19S,11519,1:55.19S,Nsubuga,Ethan,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 11-12,50,Backstroke,7,1:55.96S,11596,1:55.96S,Lewis,Miles,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 11-12,50,Breaststroke,1,52.41S,5241,52.41S,Degraffinreaidt,Darian,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Breaststroke,2,1:03.73S,6373,1:03.73S,Moreno,Fernando,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Breaststroke,3,1:22.78S,8278,1:22.78S,Greenberg,Benjamin,11,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 11-12,50,Breaststroke,4,1:24.40S,8440,1:24.40S,Oliva  Cardona,Yerik,11,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 11-12,50,Breaststroke,5,1:40.66S,10066,1:40.66S,Lewis,Miles,11,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Butterfly,1,42.63S,4263,42.63S,Degraffinreaidt,Darian,12,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 11-12,50,Butterfly,2,59.14S,5914,59.14S,Oliva  Cardona,Yerik,11,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 11-12,50,Butterfly,3,1:08.69S,6869,1:08.69S,Moreno,Fernando,11,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 11-12,50,Butterfly,4,1:42.93S,10293,1:42.93S,Lewis,Miles,11,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 11-12,50,Butterfly,5,2:04.06S,12406,2:04.06S,Nsubuga,Ethan,12,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,100,Individual Medley,1,1:16.81S,7681,1:16.81S,young,lindsay,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,100,Individual Medley,2,1:29.27S,8927,1:29.27S,Faye,Jaelyn,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,100,Individual Medley,3,1:32.89S,9289,1:32.89S,Ferguson,Teagan,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,100,Individual Medley,4,1:33.41S,9341,1:33.41S,Toole,Hayden,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,100,Individual Medley,5,1:34.58S,9458,1:34.58S,Perla,Gaby,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,100,Individual Medley,6,1:41.88S,10188,1:41.88S,Nellis,Fiona,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 13-14,100,Individual Medley,7,2:26.15S,14615,2:26.15S,Diaz,Ashley,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,100,Individual Medley,8,2:36.83S,15683,2:36.83S,Nsubuga,Samantha,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Freestyle,1,30.46S,3046,30.46S,young,lindsay,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Freestyle,2,33.39S,3339,33.39S,Faye,Jaelyn,13,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Freestyle,3,36.09S,3609,36.09S,Nellis,Fiona,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Freestyle,4,36.82S,3682,36.82S,Toole,Hayden,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Freestyle,5,37.34S,3734,37.34S,Perla,Gaby,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Freestyle,6,37.81S,3781,37.81S,Ferguson,Teagan,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Freestyle,7,45.58S,4558,45.58S,McKenzie,Gabriella,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Freestyle,8,49.32S,4932,49.32S,Diaz,Ashley,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Freestyle,9,51.84S,5184,51.84S,Nsubuga,Samantha,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Backstroke,1,33.75S,3375,33.75S,young,lindsay,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Backstroke,2,40.78S,4078,40.78S,Faye,Jaelyn,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Backstroke,3,44.03S,4403,44.03S,Nellis,Fiona,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 13-14,50,Backstroke,4,44.19S,4419,44.19S,Perla,Gaby,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,50,Backstroke,5,44.38S,4438,44.38S,Ferguson,Teagan,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Backstroke,6,50.64S,5064,50.64S,Toole,Hayden,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Backstroke,7,57.08S,5708,57.08S,McKenzie,Gabriella,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Backstroke,8,1:06.62S,6662,1:06.62S,Diaz,Ashley,14,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Backstroke,9,1:19.75S,7975,1:19.75S,Nsubuga,Samantha,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Breaststroke,1,43.22S,4322,43.22S,young,lindsay,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Breaststroke,2,45.53S,4553,45.53S,Toole,Hayden,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Breaststroke,3,46.18S,4618,46.18S,Perla,Gaby,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,50,Breaststroke,4,46.90S,4690,46.90S,Ferguson,Teagan,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Breaststroke,5,49.28S,4928,49.28S,Faye,Jaelyn,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Breaststroke,6,52.46S,5246,52.46S,Nellis,Fiona,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 13-14,50,Breaststroke,7,58.19S,5819,58.19S,Nsubuga,Samantha,14,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Breaststroke,8,1:15.56S,7556,1:15.56S,Diaz,Ashley,14,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,50,Breaststroke,9,1:22.91S,8291,1:22.91S,McKenzie,Gabriella,13,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Girls 13-14,50,Butterfly,1,32.56S,3256,32.56S,young,lindsay,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Butterfly,2,41.87S,4187,41.87S,Faye,Jaelyn,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Girls 13-14,50,Butterfly,3,44.64S,4464,44.64S,Ferguson,Teagan,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Butterfly,4,46.47S,4647,46.47S,Perla,Gaby,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Girls 13-14,50,Butterfly,5,52.00S,5200,52.00S,Nellis,Fiona,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Girls 13-14,50,Butterfly,6,57.89S,5789,57.89S,Toole,Hayden,14,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Girls 13-14,50,Butterfly,7,1:23.89S,8389,1:23.89S,Nsubuga,Samantha,14,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Girls 13-14,50,Butterfly,8,1:27.65S,8765,1:27.65S,Diaz,Ashley,14,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 13-14,100,Individual Medley,1,1:15.39S,7539,1:15.39S,Sparshott,Thomas,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,100,Individual Medley,2,1:29.16S,8916,1:29.16S,Ramachandran,Arjun,14,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 13-14,100,Individual Medley,3,1:34.13S,9413,1:34.13S,Oliva  Cardona,Tayro,13,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,100,Individual Medley,4,1:35.39S,9539,1:35.39S,Blenkinsop,Evan,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Freestyle,1,31.46S,3146,31.46S,Sparshott,Thomas,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Freestyle,2,33.69S,3369,33.69S,Ramachandran,Arjun,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Freestyle,3,34.32S,3432,34.32S,Oliva  Cardona,Tayro,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 13-14,50,Freestyle,4,36.08S,3608,36.08S,Blenkinsop,Evan,13,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Boys 13-14,50,Freestyle,5,50.25S,5025,50.25S,Dintaman,Wyatt,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Freestyle,6,54.02S,5402,54.02S,Aguilar,Ernesto,13,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 13-14,50,Backstroke,1,40.08S,4008,40.08S,Ramachandran,Arjun,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Backstroke,2,41.75S,4175,41.75S,Sparshott,Thomas,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Boys 13-14,50,Backstroke,3,43.44S,4344,43.44S,Oliva  Cardona,Tayro,13,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Backstroke,4,45.96S,4596,45.96S,Blenkinsop,Evan,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Backstroke,5,1:29.11S,8911,1:29.11S,Dintaman,Wyatt,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Breaststroke,1,42.09S,4209,42.09S,Sparshott,Thomas,14,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Breaststroke,2,44.09S,4409,44.09S,Blenkinsop,Evan,13,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Boys 13-14,50,Breaststroke,3,46.46S,4646,46.46S,Ramachandran,Arjun,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Breaststroke,4,1:01.97S,6197,1:01.97S,Oliva  Cardona,Tayro,13,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Boys 13-14,50,Butterfly,1,32.70S,3270,32.70S,Sparshott,Thomas,14,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Butterfly,2,38.34S,3834,38.34S,Oliva  Cardona,Tayro,13,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Boys 13-14,50,Butterfly,3,39.46S,3946,39.46S,Blenkinsop,Evan,13,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Boys 13-14,50,Butterfly,4,54.14S,5414,54.14S,Ramachandran,Arjun,14,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Women 15-18,100,Individual Medley,1,1:23.65S,8365,1:23.65S,Bellows,Annice,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Individual Medley,2,1:25.95S,8595,1:25.95S,Salemi,Sofia,15,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Individual Medley,3,1:28.62S,8862,1:28.62S,Kalayoglu,Melisa,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Individual Medley,4,1:30.75S,9075,1:30.75S,Santizo,Amy,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Women 15-18,100,Individual Medley,5,1:31.76S,9176,1:31.76S,young,claire,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Individual Medley,6,1:43.33S,10333,1:43.33S,Jordan,Anais,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Individual Medley,7,2:00.68S,12068,2:00.68S,Cardona,Emelly,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Individual Medley,8,2:10.63S,13063,2:10.63S,Lopez,Jahaira,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Freestyle,1,1:16.00S,7600,1:16.00S,Salemi,Sofia,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Freestyle,2,1:17.16S,7716,1:17.16S,Bellows,Annice,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Freestyle,3,1:19.97S,7997,1:19.97S,young,claire,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Freestyle,4,1:20.57S,8057,1:20.57S,Santizo,Amy,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Freestyle,5,1:22.52S,8252,1:22.52S,Kalayoglu,Melisa,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Freestyle,6,1:27.07S,8707,1:27.07S,Jordan,Anais,15,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Freestyle,7,1:32.57S,9257,1:32.57S,Lopez,Jahaira,16,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Women 15-18,100,Freestyle,8,1:37.78S,9778,1:37.78S,Cardona,Emelly,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Backstroke,1,1:22.38S,8238,1:22.38S,Bellows,Annice,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Backstroke,2,1:31.37S,9137,1:31.37S,Salemi,Sofia,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Backstroke,3,1:36.07S,9607,1:36.07S,young,claire,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Backstroke,4,1:38.03S,9803,1:38.03S,Santizo,Amy,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Women 15-18,100,Backstroke,5,1:39.20S,9920,1:39.20S,Kalayoglu,Melisa,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Backstroke,6,1:54.22S,11422,1:54.22S,Jordan,Anais,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Backstroke,7,2:10.90S,13090,2:10.90S,Lopez,Jahaira,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Backstroke,8,2:14.28S,13428,2:14.28S,Cardona,Emelly,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Breaststroke,1,1:35.53S,9553,1:35.53S,Bellows,Annice,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Breaststroke,2,1:36.71S,9671,1:36.71S,Kalayoglu,Melisa,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Breaststroke,3,1:37.59S,9759,1:37.59S,Salemi,Sofia,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,100,Breaststroke,4,1:48.62S,10862,1:48.62S,Santizo,Amy,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,100,Breaststroke,5,1:50.37S,11037,1:50.37S,Jordan,Anais,15,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Breaststroke,6,2:01.28S,12128,2:01.28S,young,claire,16,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Women 15-18,100,Breaststroke,7,2:17.31S,13731,2:17.31S,Cardona,Emelly,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,100,Breaststroke,8,2:37.66S,15766,2:37.66S,Lopez,Jahaira,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,50,Butterfly,1,38.56S,3856,38.56S,Bellows,Annice,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,50,Butterfly,2,39.89S,3989,39.89S,Salemi,Sofia,15,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,50,Butterfly,3,40.31S,4031,40.31S,Santizo,Amy,15,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Women 15-18,50,Butterfly,4,40.70S,4070,40.70S,Kalayoglu,Melisa,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,50,Butterfly,4,40.70S,4070,40.70S,young,claire,16,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,50,Butterfly,6,50.96S,5096,50.96S,Jordan,Anais,15,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Women 15-18,50,Butterfly,7,59.75S,5975,59.75S,Cardona,Emelly,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Women 15-18,50,Butterfly,8,1:09.27S,6927,1:09.27S,Lopez,Jahaira,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,1,1:07.76S,6776,1:07.76S,Sparshott,Joseph,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Individual Medley,2,1:08.84S,6884,1:08.84S,Garcia,Adrian,18,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Men 15-18,100,Individual Medley,3,1:14.26S,7426,1:14.26S,Bryant,Kaleb,17,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,4,1:14.40S,7440,1:14.40S,McDonald,Jonah,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,5,1:14.84S,7484,1:14.84S,Dixon,Abenezer,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,6,1:17.70S,7770,1:17.70S,Vanskike,Otto,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,7,1:17.82S,7782,1:17.82S,Joshi,Ariel,17,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Individual Medley,8,1:17.96S,7796,1:17.96S,Patel,Shailen,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Individual Medley,9,1:19.95S,7995,1:19.95S,Salemi,Anthony,16,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Individual Medley,10,1:22.21S,8221,1:22.21S,Sosa Barrios,Francarlo,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,11,1:22.45S,8245,1:22.45S,Joshi,Gabriel,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Individual Medley,12,1:33.37S,9337,1:33.37S,Martinez,Diego,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Individual Medley,13,1:43.03S,10303,1:43.03S,Ferguson,Kieran,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,1,1:00.58S,6058,1:00.58S,Sparshott,Joseph,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Freestyle,2,1:01.51S,6151,1:01.51S,Garcia,Adrian,18,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,3,1:02.28S,6228,1:02.28S,Dixon,Abenezer,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Freestyle,4,1:04.14S,6414,1:04.14S,Joshi,Gabriel,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,5,1:04.52S,6452,1:04.52S,Bryant,Kaleb,17,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Freestyle,6,1:06.83S,6683,1:06.83S,Joshi,Ariel,17,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,100,Freestyle,7,1:07.29S,6729,1:07.29S,McDonald,Jonah,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Freestyle,8,1:08.26S,6826,1:08.26S,Patel,Shailen,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Freestyle,9,1:10.76S,7076,1:10.76S,Vanskike,Otto,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,10,1:10.88S,7088,1:10.88S,Salemi,Anthony,16,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,100,Freestyle,11,1:21.28S,8128,1:21.28S,Sosa Barrios,Francarlo,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,12,1:22.34S,8234,1:22.34S,Martinez,Diego,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,13,1:36.69S,9669,1:36.69S,Ferguson,Kieran,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Freestyle,14,1:49.47S,10947,1:49.47S,Davies,Henry,17,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,100,Freestyle,15,2:12.06S,13206,2:12.06S,LeBlanc,Noah,16,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,100,Backstroke,1,1:07.90S,6790,1:07.90S,Sparshott,Joseph,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Backstroke,2,1:18.17S,7817,1:18.17S,Salemi,Anthony,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Backstroke,3,1:19.14S,7914,1:19.14S,Joshi,Ariel,17,LB,Long Branch Water Wizards,06/18/22,Week 1 A Meet vs. Ashton
+Men 15-18,100,Backstroke,4,1:21.47S,8147,1:21.47S,Joshi,Gabriel,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Backstroke,5,1:22.15S,8215,1:22.15S,Vanskike,Otto,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Backstroke,6,1:23.20S,8320,1:23.20S,Dixon,Abenezer,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Backstroke,7,1:31.76S,9176,1:31.76S,Martinez,Diego,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Backstroke,8,1:31.97S,9197,1:31.97S,Sosa Barrios,Francarlo,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Backstroke,9,1:32.13S,9213,1:32.13S,Bryant,Kaleb,17,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,100,Backstroke,10,1:33.91S,9391,1:33.91S,Patel,Shailen,15,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,100,Backstroke,11,1:39.15S,9915,1:39.15S,McDonald,Jonah,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Backstroke,12,1:59.52S,11952,1:59.52S,Ferguson,Kieran,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Backstroke,13,2:25.03S,14503,2:25.03S,LeBlanc,Noah,16,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,100,Breaststroke,1,1:13.44S,7344,1:13.44S,Garcia,Adrian,18,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Breaststroke,2,1:17.79S,7779,1:17.79S,Bryant,Kaleb,17,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Breaststroke,3,1:18.49S,7849,1:18.49S,McDonald,Jonah,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,100,Breaststroke,4,1:21.70S,8170,1:21.70S,Dixon,Abenezer,16,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,100,Breaststroke,5,1:25.75S,8575,1:25.75S,Vanskike,Otto,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,100,Breaststroke,6,1:31.94S,9194,1:31.94S,Salemi,Anthony,16,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Breaststroke,7,1:39.02S,9902,1:39.02S,Patel,Shailen,15,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,100,Breaststroke,8,1:49.08S,10908,1:49.08S,Joshi,Gabriel,15,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,100,Breaststroke,9,1:51.82S,11182,1:51.82S,Ferguson,Kieran,16,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,100,Breaststroke,10,2:09.75S,12975,2:09.75S,Martinez,Diego,15,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,50,Butterfly,1,28.60S,2860,28.60S,Sparshott,Joseph,16,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,50,Butterfly,2,30.21S,3021,30.21S,Bryant,Kaleb,17,LB,Long Branch Water Wizards,06/25/22,Week 2 A Meet at Flower Hill
+Men 15-18,50,Butterfly,3,30.46S,3046,30.46S,Dixon,Abenezer,16,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,50,Butterfly,4,30.81S,3081,30.81S,Garcia,Adrian,18,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,50,Butterfly,5,31.33S,3133,31.33S,Joshi,Ariel,17,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,50,Butterfly,6,32.83S,3283,32.83S,McDonald,Jonah,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,50,Butterfly,7,34.02S,3402,34.02S,Vanskike,Otto,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,50,Butterfly,8,34.63S,3463,34.63S,Joshi,Gabriel,15,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,50,Butterfly,9,35.47S,3547,35.47S,Salemi,Anthony,16,LB,Long Branch Water Wizards,06/22/22,Intrasquad Meet
+Men 15-18,50,Butterfly,10,37.46S,3746,37.46S,Patel,Shailen,15,LB,Long Branch Water Wizards,06/13/22,Practice Times
+Men 15-18,50,Butterfly,11,40.20S,4020,40.20S,Sosa Barrios,Francarlo,16,LB,Long Branch Water Wizards,06/11/22,Time Trials
+Men 15-18,50,Butterfly,12,46.50S,4650,46.50S,Martinez,Diego,15,LB,Long Branch Water Wizards,06/29/22,B Meet vs. Daleview
+Men 15-18,50,Butterfly,13,51.66S,5166,51.66S,Ferguson,Kieran,16,LB,Long Branch Water Wizards,06/11/22,Time Trials

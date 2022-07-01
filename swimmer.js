@@ -8,6 +8,8 @@ function Swimmer(swimmer){
     this.address = swimmer.address;
     this.zip = swimmer.zip;
 
+    this.topTimes = swimmer.topTimes; //new Array(5);
+
     //this.age = age;
     this.age = age(this.dob, "06012022");
     let name = this.apellido + ", ";
@@ -48,6 +50,7 @@ function SavedSwimmer(swimmer){
     this.id = swimmer.id;
     this.address = swimmer.address;
     this.zip = swimmer.zip;
+    this.topTimes = swimmer.topTimes;
 }
 
 function age(dob, date){
@@ -67,7 +70,7 @@ Swimmer.prototype.isAge = function(ageGroup){
 
 Swimmer.prototype.isSwimmer = function(swimmer){
     let is = (this.id == swimmer.id);
-    if (!is && this.nombre == swimmer.nombre && this.apellido == swimmer.apellido && this.dob == swimmer.dob) is = true;
+    if (!is && this.nombre == swimmer.nombre && this.apellido == swimmer.apellido) is = true;
     return is;
 }
 

@@ -140,3 +140,19 @@ button.red{
 button.blue{
     background-color: blue;
 }
+
+div.relay.swimmers {
+    display:inline-block;
+    width: 55%;
+    vertical-align: top;
+}
+
+div.relay.relays {
+    display:inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+table.lineup td.relays {
+    min-width: 60px;
+}
