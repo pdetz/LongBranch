@@ -18,6 +18,9 @@ function Season(season){
         this.meets.push(new Meet(meet, this));
     });
 
+    this.relayEvents = [];
+    this.relaysRoster = [];
+
     //this.meetTypes = season.meetTypes; // array of Meet Types
     this.currentMeet = this.meets[season.currentMeet];
 
@@ -96,6 +99,8 @@ const IM = new Stroke("Individual Medley", "IM");
 const RELAY = new Stroke("Relay", "RE");
 
 const STROKES = [IM, FR, BK, BR, FL, RELAY];
+
+const MR = [BK, BR, FL, FR];
 
 const DISTANCES = ["25M", "50M", "100M"];
 
