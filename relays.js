@@ -16,14 +16,29 @@ function relays(season) {
     ag.forEach(ageGroup => {
         console.log(ageGroup);
         ["M", "F"].forEach(gender => {
-            swimmers.append(season.relayTable(ageGroup, gender, meet));
+            swimmers.append(season.relayRoster(ageGroup, gender, meet));
         });
     });
 
     return editor.append(swimmers).append(relays);
 }
 
-Season.prototype.relayTable = function(ageGroup, gender, meet){
+function Relay(groups){
+    this.table = make("table.lineups");
+    this.relay = [];
+    this.n = 1;
+}
+
+function medleyRelay(groups){
+    
+}
+
+function fastest(stroke, roster){
+
+}
+
+
+Season.prototype.relayRoster = function(ageGroup, gender, meet){
     let swimmers = [];
     let season = this;
 

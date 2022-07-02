@@ -81,7 +81,7 @@ function Entry(entry, meet, roster){
     this.e = meet.type.events[entry.e];
     //this.swimmer = entry.swimmer;
     this.swimmer = roster[entry.swimmer];
-    this.time = entry.t;
+    this.time = entry.time;
     this.heat = entry.heat;
     this.lane = entry.lane;
     this.n = entry.n;
@@ -92,7 +92,7 @@ function Entry(entry, meet, roster){
 function SavedEntry(entry, meet, roster){
     this.e = meet.type.events.indexOf(entry.e);
     this.swimmer = roster.indexOf(entry.swimmer);
-    this.time = entry.t;
+    this.time = entry.time;
     this.heat = entry.heat;
     this.lane = entry.lane;
     if (meet.ISMeet !== "A Meet"){
