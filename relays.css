@@ -1,0 +1,71 @@
+div.relay.swimmers {
+    display:inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+div.relay.relays {
+    display:inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+div.relays{
+    display:inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+table.lineup td.relays {
+    min-width: 80px;
+    font-size: 1em;
+    line-height: 1.25em;
+    padding: 2px;
+}
+
+table.lineup td.relays:first-child {
+    font-size: 1.25em;
+    font-weight: lighter;
+}
+
+table.lineup.relays td{
+    padding: 1px 4px;
+}
+
+table.lineup.relays td:first-child {
+    width: 1.25em;
+    font-size:1em;
+}
+
+table.lineup.relays td:nth-child(2) {
+    width: 14em;
+    text-align: left;
+}
+
+table.lineup.relays td:nth-child(3) {
+    width: 6em;
+    text-align: right;
+}
+
+div.relays {
+    margin: 6px 0;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+button.absence{
+    background:none;
+    width: 100%;
+    text-align: left;
+}
+
+button.absence:hover{
+    background-color: #6af;
+}
+
+button.absence.absent{
+    font-style: italic;
+    font-color: #aaa;
+}

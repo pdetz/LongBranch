@@ -8,6 +8,8 @@ function loadLeftBar(season){
         }
     });
 
+    buttons.append(make("button.top.relay").html("REL").data("season", season));
+
     $("#leftbar").append(buttons);
 }
 

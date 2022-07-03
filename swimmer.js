@@ -8,7 +8,17 @@ function Swimmer(swimmer){
     this.address = swimmer.address;
     this.zip = swimmer.zip;
 
-    this.topTimes = swimmer.topTimes; //new Array(5);
+    this.topTimes = [];
+    swimmer.topTimes.forEach(time => {
+        if (!time) {
+            this.topTimes.push(null);
+        }
+        else {
+            let t = new Time(parseInt(time.distance), STROKES[time.stroke], parseInt(time.t));
+            this.topTimes.push(t);
+        }
+    }); //new Array(5);
+    //console.log(this.topTimes);
 
     //this.age = age;
     this.age = age(this.dob, "06012022");
@@ -30,6 +40,22 @@ function Swimmer(swimmer){
 
 }
 
+function Time(d, s, t){
+    this.distance = d;
+    this.stroke = s;
+    this.t = t;
+}
+
+function SavedTime(time){
+    this.distance = time.distance;
+    this.stroke = STROKES.indexOf(time.stroke);
+    this.t = time.t;
+}
+
+function newTime(d, s, t){
+    return new Time(d, s, t);
+}
+
 Swimmer.prototype.nicknames = function(){
     let name = this.apellido + ", ";
     if (this.nickname == ""){
@@ -41,6 +67,11 @@ Swimmer.prototype.nicknames = function(){
     return name;
 }
 
+Swimmer.prototype.timeByStroke = function(stroke){
+    //this.topTimes.forEach(time)
+    return this.topTimes[STROKES.indexOf(stroke)];
+}
+
 function SavedSwimmer(swimmer){
     this.dob = swimmer.dob;
     this.nombre = swimmer.nombre;
@@ -50,6 +81,16 @@ function SavedSwimmer(swimmer){
     this.id = swimmer.id;
     this.address = swimmer.address;
     this.zip = swimmer.zip;
+    this.topTimes = [];
+    swimmer.topTimes.forEach(time => {
+        if (!time) {
+            this.topTimes.push(null);
+        }
+        else {
+            let t = new SavedTime(parseInt(time.distance), STROKES.indexOf(time.stroke), parseInt(time.t));
+            this.topTimes.push(t);
+        }
+    }); //new Array(5);
     this.topTimes = swimmer.topTimes;
 }
 

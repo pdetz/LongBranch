@@ -20,9 +20,18 @@ function Season(season){
 
     this.relayEvents = [];
     this.relaysRoster = [];
+    this.relayAbsent = [];
+
+    [].concat(season.relayAbsent).forEach(absentee =>{
+        this.relayAbsent.push(this.roster[absentee]);
+    })
+
+    this.relayRosterTables = make("div.relayRoster");
+    this.potentialRelays = make("div.potentialRelays");
 
     //this.meetTypes = season.meetTypes; // array of Meet Types
-    this.currentMeet = this.meets[season.currentMeet];
+    let i =  (season.currentMeet == -1) ? 1:season.currentMeet;
+        this.currentMeet = this.meets[i];
 
 }
 
@@ -31,6 +40,11 @@ function SavedSeason(season){
 
     season.roster.forEach(swimmer =>{
         this.roster.push(new SavedSwimmer(swimmer));
+    });
+    
+    this.relayAbsent = [];
+    season.relayAbsent.forEach(absentee =>{
+        this.relayAbsent.push(season.roster.indexOf(absentee));
     })
 
     this.meetTypes = [];
@@ -44,7 +58,8 @@ function SavedSeason(season){
         console.log(this.meets);
     });
 
-    this.currentMeet = season.meets.indexOf(season.currentMeet);
+    this.currentMeet = season.meets.indexOf(season.currentMeet);;
+
     return this;
 }
 

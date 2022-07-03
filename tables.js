@@ -1,10 +1,15 @@
 function loadTables(season){
-
     season.meets.forEach(meet =>{
         loadTable(meet, season);
     });
 
-    $("#left").append(season.currentMeet.lineup);
+    if (season.currentMeet === "REL"){
+        $("#left").append(season.relayRosterTables);
+        $("#right").append(season.potentialRelays);
+    }
+    else {
+        $("#left").append(season.currentMeet.lineup);
+    }
 }
 
 function loadTable(meet, season){

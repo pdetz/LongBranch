@@ -27,6 +27,22 @@ function attachClickHandlers(season){
             button.removeClass("sel");
         }
     });
+
+    $("#left").on("click", "button.absence", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        let season = button.data("season");
+        let swimmer = button.data("swimmer");
+        if (button.hasClass("absent")){
+            button.removeClass("absent");
+            season.relayAbsent.splice(season.relayAbsent.indexOf(swimmer), 1);
+        }
+        else {
+            button.addClass("absent");
+            season.relayAbsent.push(swimmer);
+        }
+        loadRelays(season);
+    });
     
     $("#right").on("click", "button.eventTitle.distance", function(e){
         e.stopImmediatePropagation();
@@ -64,9 +80,35 @@ function attachClickHandlers(season){
             $("#left").append(meet.lineup);
             meet.lineup.show();
             $("button.meet.sel").removeClass("sel");
+            $("button.relay.sel").removeClass("sel");
             button.toggleClass("sel");
             season.currentMeet = meet;
             document.title = season.currentMeet.title.html();
+        };
+    });   
+    
+    $('#leftbar').on("click", "button.relay", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        if (!button.hasClass("sel")){
+            let season = button.data("season");
+            console.log(season);
+            let meet = "REL";
+
+            relays(season);
+
+            $("#left").children().hide();
+            $("#left").append(season.relayRosterTables);
+            season.relayRosterTables.show();
+            
+            $("#right").children().hide();
+            $("#right").append(season.potentialRelays);
+            season.potentialRelays.show();
+            
+            $("button.meet.sel").removeClass("sel");
+            button.toggleClass("sel");
+            season.currentMeet = meet;
+            document.title = "Relay Carnival";
         };
     });   
     
