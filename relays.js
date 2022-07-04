@@ -154,6 +154,9 @@ Relay.prototype.addMedleyRelays = function(groups, orders, season){
             else {
                 exclude.push(swimmer);
                 entries.push(new RelayEntry(swimmer, relaySplit(swimmer.timeByStroke(stroke), distance), stroke, distance));
+                if (swimmer.nombre == "Michael"){
+                    console.log("Michael", swimmer.timeByStroke(stroke), relaySplit(swimmer.timeByStroke(stroke), distance));
+                }
                 sortRelayEntries(entries);    
             }
             //console.log(swimmer.timeByStroke(stroke));
