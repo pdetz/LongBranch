@@ -223,7 +223,7 @@ function fastest(group, exclude, stroke, distance){
 function relaySplit(time, distance){
     if (time.distance == distance) return time.t;
     if (time.distance == 100 && distance == 50) return Math.floor(time.t / 2 - 400);
-    if (time.distance == 50 && distance == 25) return Math.floor(time.t / 2 - 300);
+    if (time.distance == 50 && distance == 25) return Math.floor(time.t / 2 - 200);
     if (time.distance == 25 && distance == 50) return 2 * time + 600;
     //console.log(time.distance, distance);
 }
