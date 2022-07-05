@@ -129,6 +129,14 @@ function loadRelays(season){
     event18.addMedleyRelays([_1112g, _1112g, _1112g, _1112g], P4, season);
     //season.relayEvents.push(event18);
 
+    let event19 = new Relay(19, "13-14 Boys Medley", 200);
+    event19.addMedleyRelays([_1314b, _1314b, _1314b, _1314b], P4, season);
+    //season.relayEvents.push(event17);
+    
+    let event20 = new Relay(20, "13-14 Girls Medley", 200);
+    event20.addMedleyRelays([_1314g, _1314g, _1314g, _1314g], P4, season);
+    //season.relayEvents.push(event18);
+
     season.relayEvents.forEach(relay =>{
         for (let r = 0; r < 1 && r < relay.relays.length; r++){
             relay.tables.append(relay.relays[r].table);
