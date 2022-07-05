@@ -82,6 +82,8 @@ function loadRelays(season){
     });
    // season.relayEvents.push(event10);
 
+    season.relayEvents.push(new Relay(1, ))
+
     let event11 = new Relay(11, "14&U Girls 100M Medley", 100);
     let girls14u = [_8ug, _910g, _1112g, _1314g];
     P4.forEach(order =>{
@@ -128,11 +130,12 @@ function loadRelays(season){
     //season.relayEvents.push(event18);
 
     season.relayEvents.forEach(relay =>{
-        for (let r = 0; r < 5 && r < relay.relays.length; r++){
+        for (let r = 0; r < 1 && r < relay.relays.length; r++){
             relay.tables.append(relay.relays[r].table);
-            season.potentialRelays.append(relay.tables);
         }
+        season.potentialRelays.append(relay.tables);
     });      
+    
 }
 
 Relay.prototype.addMedleyRelays = function(groups, orders, season){
@@ -164,6 +167,7 @@ Relay.prototype.addMedleyRelays = function(groups, orders, season){
         if (validRelay) this.addRelay(new PotentialRelay(entries));
     });
     season.relayEvents.push(this);
+    return this;
 }
 
 Relay.prototype.addRelay = function(potentialRelay){
