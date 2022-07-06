@@ -61,6 +61,14 @@ function loadRelays(season){
     //season.relayEvents.push(medleyRelay(8, "Boys Open 200M Medley", "200M", _8ub));
     //season.relayEvents.push(new Relay(9, "Girls Open 200M Medley", "200M"));
 
+    season.relayEvents.push(new Relay(1, "14 & Under Boys Free", 200).addFreeRelays([_910b, _1112b, _1314b, _8ub], season, [50,50,50,25]));
+    season.relayEvents.push(new Relay(2, "14 & Under Girls Free", 200).addFreeRelays([_910g, _1112g, _1314g, _8ug], season, [50,50,50,25]));
+    season.relayEvents.push(new Relay(3, "15-18 Mixed Free", 200).addFreeRelays([_1518b, _1518g, _1518g, _1518b], season));
+    season.relayEvents.push(new Relay(4, "13-14 Mixed Free", 200).addFreeRelays([_1314b, _1314g, _1314g, _1314b], season));
+    season.relayEvents.push(new Relay(5, "8&U Mixed Free", 100).addFreeRelays([_8ug, _8ub, _8ub, _8ug], season));
+    season.relayEvents.push(new Relay(6, "9-10 Mixed Free", 200).addFreeRelays([_910b, _910g, _910g, _910b], season));
+    season.relayEvents.push(new Relay(7, "11-12 Mixed Free", 200).addFreeRelays([_1112g, _1112b, _1112g, _1112b], season));
+
 
     let event8 = new Relay(8, "Boys Open 200M Medley", 200);
     event8.addMedleyRelays([_openb,_openb,_openb,_openb], P4, season);
@@ -81,8 +89,6 @@ function loadRelays(season){
         event10.addMedleyRelays(ageOrder, [[0,1,2,3]], season);
     });
    // season.relayEvents.push(event10);
-
-    season.relayEvents.push(new Relay(1, ))
 
     let event11 = new Relay(11, "14&U Girls 100M Medley", 100);
     let girls14u = [_8ug, _910g, _1112g, _1314g];
@@ -137,6 +143,9 @@ function loadRelays(season){
     event20.addMedleyRelays([_1314g, _1314g, _1314g, _1314g], P4, season);
     //season.relayEvents.push(event18);
 
+    season.relayEvents.push(new Relay(21, "Boys Free Crescendo", 250).addFreeRelays([_8ub, _1112b, _1518b, _1314b, _910b], season, [25,50,100,50,25]));
+    season.relayEvents.push(new Relay(22, "Girls Free Crescnedo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
+
     season.relayEvents.forEach(relay =>{
         for (let r = 0; r < 1 && r < relay.relays.length; r++){
             relay.tables.append(relay.relays[r].table);
@@ -144,6 +153,47 @@ function loadRelays(season){
         season.potentialRelays.append(relay.tables);
     });      
     
+}
+
+Relay.prototype.addFreeRelays = function(groups, season, distances = "even"){
+
+    let mrOrder = [2, 3, 4, 1];
+
+        let exclude = [].concat(season.relayAbsent);
+        let entries = [];
+        let validRelay = true;
+        let s = 0;
+        let distance = this.distance / 4;
+
+        groups.forEach(group => {
+            if (distances !== "even") {
+                distance = distances[s];
+            }
+            let swimmer = fastest(group, exclude, FR, distance);
+            if (swimmer === NO_SWIMMER) {
+                validRelay = false;
+            }
+            else {
+                exclude.push(swimmer);
+                entries.push(new RelayEntry(swimmer, relaySplit(swimmer.timeByStroke(FR), distance), FR, distance));
+            };
+            s++;
+        });
+
+        if (distances === "even"){
+            console.log(entries);
+            entries.sort((entry1, entry2) =>{
+                console.log(entry1.time, entry2.time);
+                return entry1.time - entry2.time;
+            });
+            let anchor = entries.shift();
+            entries.push(anchor);
+        }
+
+        if (validRelay) this.addRelay(new PotentialRelay(entries));
+        season.relayEvents.push(this);
+
+    return this;
 }
 
 Relay.prototype.addMedleyRelays = function(groups, orders, season){
@@ -165,9 +215,7 @@ Relay.prototype.addMedleyRelays = function(groups, orders, season){
             else {
                 exclude.push(swimmer);
                 entries.push(new RelayEntry(swimmer, relaySplit(swimmer.timeByStroke(stroke), distance), stroke, distance));
-                if (swimmer.nombre == "Michael"){
-                    console.log("Michael", swimmer.timeByStroke(stroke), relaySplit(swimmer.timeByStroke(stroke), distance));
-                }
+
                 sortRelayEntries(entries);    
             }
             //console.log(swimmer.timeByStroke(stroke));
@@ -271,22 +319,31 @@ function PotentialRelay(entries){
 PotentialRelay.prototype.potentialRelayTable = function(){
     let table = make("table.lineup.relays");
     let tbody = make("tbody");
+
+    let freeRelay = true;
+
     tbody.append(
         make("tr")
         .append(make("td"))
         .append(make("td").html("Swimmer"))
         .append(make("td").html("Time")));
 
+    this.entries.forEach(entry =>{if (entry.stroke != FR) freeRelay = false });
+
     this.entries.forEach(entry =>{
+
+        let strokeOrDistance = make("td.relayEntry").html(entry.stroke.abbr);
+        if (freeRelay) {strokeOrDistance.addClass("free").html(entry.distance)};
+
         tbody.append(
             make("tr")
-            .append(make("td").html(entry.stroke.abbr))
+            .append(strokeOrDistance)
             .append(make("td").html(entry.swimmer.display()))
             .append(make("td").html(displayTime(entry.time))));
     });
 
     tbody.append(
-        make("tr")
+        make("tr.timeRow")
         .append(make("td"))//.html("(" + this.n + ")"))
         .append(make("td"))
         .append(make("td").append(make("span.bold").html(displayTime(this.time)))));
