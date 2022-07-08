@@ -147,7 +147,7 @@ function loadRelays(season){
     season.relayEvents.push(new Relay(22, "Girls Free Crescnedo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
 
     season.relayEvents.forEach(relay =>{
-        for (let r = 0; r < 1 && r < relay.relays.length; r++){
+        for (let r = 0; r < 8 && r < relay.relays.length; r++){
             relay.tables.append(relay.relays[r].table);
         }
         season.potentialRelays.append(relay.tables);
