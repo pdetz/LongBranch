@@ -10,7 +10,7 @@ function relays(season) {
     loadHY3(fileInput, season, loadPRs, season.meets[8]);
 
     season.potentialRelays.html(fileInput)
-        .append(make("button.top.entries").append(UPLOAD, "Upload Top Times"))
+        .append(make("button.top.entries.noprint").append(UPLOAD, "Upload Top Times"))
         .append("<br>");
 
     //let fileInput = $('<input type="file" class="entries" accept=".csv,.CSV" style="display:none"></input>');
@@ -61,13 +61,13 @@ function loadRelays(season){
     //season.relayEvents.push(medleyRelay(8, "Boys Open 200M Medley", "200M", _8ub));
     //season.relayEvents.push(new Relay(9, "Girls Open 200M Medley", "200M"));
 
-    season.relayEvents.push(new Relay(1, "14 & Under Boys Free", 200).addFreeRelays([_910b, _1112b, _1314b, _8ub], season, [50,50,50,25]));
-    season.relayEvents.push(new Relay(2, "14 & Under Girls Free", 200).addFreeRelays([_910g, _1112g, _1314g, _8ug], season, [50,50,50,25]));
-    season.relayEvents.push(new Relay(3, "15-18 Mixed Free", 200).addFreeRelays([_1518b, _1518g, _1518g, _1518b], season));
-    season.relayEvents.push(new Relay(4, "13-14 Mixed Free", 200).addFreeRelays([_1314b, _1314g, _1314g, _1314b], season));
-    season.relayEvents.push(new Relay(5, "8&U Mixed Free", 100).addFreeRelays([_8ug, _8ub, _8ub, _8ug], season));
-    season.relayEvents.push(new Relay(6, "9-10 Mixed Free", 200).addFreeRelays([_910b, _910g, _910g, _910b], season));
-    season.relayEvents.push(new Relay(7, "11-12 Mixed Free", 200).addFreeRelays([_1112g, _1112b, _1112g, _1112b], season));
+    season.relayEvents.push(new Relay(1, "14 & Under Boys 175M Free", 175).addFreeRelays([_910b, _1112b, _1314b, _8ub], season, [50,50,50,25]));
+    season.relayEvents.push(new Relay(2, "14 & Under Girls 175M Free", 200).addFreeRelays([_910g, _1112g, _1314g, _8ug], season, [50,50,50,25]));
+    season.relayEvents.push(new Relay(3, "15-18 Mixed 200M Free", 200).addFreeRelays([_1518b, _1518g, _1518g, _1518b], season));
+    season.relayEvents.push(new Relay(4, "13-14 Mixed 200M Free", 200).addFreeRelays([_1314b, _1314g, _1314g, _1314b], season));
+    season.relayEvents.push(new Relay(5, "8&U Mixed 100M Free", 100).addFreeRelays([_8ug, _8ub, _8ub, _8ug], season));
+    season.relayEvents.push(new Relay(6, "9-10 Mixed 200M Free", 200).addFreeRelays([_910b, _910g, _910g, _910b], season));
+    season.relayEvents.push(new Relay(7, "11-12 Mixed 200M Free", 200).addFreeRelays([_1112g, _1112b, _1112g, _1112b], season));
 
 
     let event8 = new Relay(8, "Boys Open 200M Medley", 200);
@@ -118,7 +118,7 @@ function loadRelays(season){
     event15.addMedleyRelays([_910g, _910g, _910g, _910g], P4, season);
     //season.relayEvents.push(event15);
 
-    let event16 = new Relay(16, "15-18 Mixed Medley", 200);
+    let event16 = new Relay(16, "15-18 Mixed 200M Medley", 200);
     event16.addMedleyRelays([_1518b, _1518b, _1518g, _1518g], P4, season);
     event16.addMedleyRelays([_1518b, _1518g, _1518b, _1518g], P4, season);
     event16.addMedleyRelays([_1518b, _1518g, _1518g, _1518b], P4, season);
@@ -127,27 +127,27 @@ function loadRelays(season){
     event16.addMedleyRelays([_1518g, _1518g, _1518b, _1518b], P4, season);
     //season.relayEvents.push(event16);
     
-    let event17 = new Relay(17, "11-12 Boys Medley", 200);
+    let event17 = new Relay(17, "11-12 Boys 200M Medley", 200);
     event17.addMedleyRelays([_1112b, _1112b, _1112b, _1112b], P4, season);
     //season.relayEvents.push(event17);
     
-    let event18 = new Relay(18, "11-12 Girls Medley", 200);
+    let event18 = new Relay(18, "11-12 Girls 200M Medley", 200);
     event18.addMedleyRelays([_1112g, _1112g, _1112g, _1112g], P4, season);
     //season.relayEvents.push(event18);
 
-    let event19 = new Relay(19, "13-14 Boys Medley", 200);
+    let event19 = new Relay(19, "13-14 Boys 200M Medley", 200);
     event19.addMedleyRelays([_1314b, _1314b, _1314b, _1314b], P4, season);
     //season.relayEvents.push(event17);
     
-    let event20 = new Relay(20, "13-14 Girls Medley", 200);
+    let event20 = new Relay(20, "13-14 Girls 200M Medley", 200);
     event20.addMedleyRelays([_1314g, _1314g, _1314g, _1314g], P4, season);
     //season.relayEvents.push(event18);
 
-    season.relayEvents.push(new Relay(21, "Boys Free Crescendo", 250).addFreeRelays([_8ub, _1112b, _1518b, _1314b, _910b], season, [25,50,100,50,25]));
-    season.relayEvents.push(new Relay(22, "Girls Free Crescnedo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
+    season.relayEvents.push(new Relay(21, "Boys 250M Free Crescendo", 250).addFreeRelays([_8ub, _1112b, _1518b, _1314b, _910b], season, [25,50,100,50,25]));
+    season.relayEvents.push(new Relay(22, "Girls 250M Free Crescnedo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
 
     season.relayEvents.forEach(relay =>{
-        for (let r = 0; r < 8 && r < relay.relays.length; r++){
+        for (let r = 0; r < 1 && r < relay.relays.length; r++){
             relay.tables.append(relay.relays[r].table);
         }
         season.potentialRelays.append(relay.tables);
