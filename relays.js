@@ -144,7 +144,7 @@ function loadRelays(season){
     //season.relayEvents.push(event18);
 
     season.relayEvents.push(new Relay(21, "Boys 250M Free Crescendo", 250).addFreeRelays([_8ub, _1112b, _1518b, _1314b, _910b], season, [25,50,100,50,25]));
-    season.relayEvents.push(new Relay(22, "Girls 250M Free Crescnedo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
+    season.relayEvents.push(new Relay(22, "Girls 250M Free Crescendo", 250).addFreeRelays([_8ug, _1112g, _1518g, _1314g, _910g], season, [25,50,100,50,25]));
 
     season.relayEvents.forEach(relay =>{
         for (let r = 0; r < 1 && r < relay.relays.length; r++){
