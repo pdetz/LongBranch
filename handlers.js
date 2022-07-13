@@ -7,7 +7,17 @@ function attachClickHandlers(season){
 
     });
 
+    $("#right").on("click", "button.heat", function(e){
+        e.stopImmediatePropagation();
+        let button = $(this);
+        let heat = button.data("heat");
+        let event = button.data("event");
+        console.log(heat, event);
+        if (heat.swimmers() === 0) event.removeHeat(heat);
+    });
+
     $("#right").on("click", "button.lane.name", function(e){
+        e.stopImmediatePropagation();
         let button = $(this);
         let lane = button.data("lane");
         let event = lane.event;
@@ -137,6 +147,7 @@ function attachClickHandlers(season){
         let swimmer = button.data("swimmer");
         let meet = button.data("meet");
         let eN = button.data("e");
+        let stroke = meet.type.events[eN].stroke;
         //console.log(swimmer, meet, eN);
         if (button.hasClass("entry")){
             console.log(button.data("entry"));
@@ -151,8 +162,8 @@ function attachClickHandlers(season){
             let entry = newEntry(meet, eN, swimmer, t);
             entry.button = button;
             meet.entries.push(entry);
-            button.data("entry", entry);
-            button.data("stroke", meet.type.events[eN].stroke);
+            button.data("entry", entry);1
+            button.data("stroke", stroke);
             //console.log(meet.entries);
             if (KEYPRESSED == 0){
                 button.append(BOLT);
@@ -162,9 +173,14 @@ function attachClickHandlers(season){
                 //button.data("entry").flag("swim up");
             }
             else if (KEYPRESSED == 50 || KEYPRESSED == 98){
-                button.append("25");
-                button.data("distance","25M");
-                console.log("50M");
+                console.log(stroke);
+                if (stroke === 0){
+                    button.data("distance", "200M")
+                }
+                else{
+                    button.append("25");
+                    button.data("distance","25M");
+                }
             }
             else if (KEYPRESSED == 53 || KEYPRESSED == 101){
                 button.append("50");
@@ -180,7 +196,8 @@ function attachClickHandlers(season){
                 meet.ISMeet.events.forEach(event => {
                     if (button.data("distance") == event.distance && button.data("stroke") == event.stroke){
                         meet.ISMeet.seedEntry(entry, event);
-                        button.html("h" + entry.heat + "l" + entry.lane);
+                        entry.EHL();
+                        //button.html("2h" + entry.heat + "l" + entry.lane);
                     }
                 });
             }
@@ -209,12 +226,10 @@ function attachKeyHandlers(){
     $(window).keydown(function(e) {
         if (KEYPRESSED != e.which){
             KEYPRESSED = e.which;
-            console.log(KEYPRESSED, e.which);
         }
     });
     $(window).keyup(function(e) {
         KEYPRESSED = 0;
-        console.log(KEYPRESSED);
     });
 
 

@@ -124,3 +124,11 @@ function newEntry(meet, e, swimmer, t){
     newE.swimmer = swimmer;
     return newE;
 }
+
+Entry.prototype.EHL = function(){
+    let e = this.n;
+    let h = this.heat + 1;
+    let l = this.lane + 1;
+    //this.button.html("yeah");
+    this.button.html(e.toString() + "," + h.toString() + "," + l.toString());
+}

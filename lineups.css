@@ -20,11 +20,11 @@ table.lineup td {
     vertical-align: center; 
     background:none;
     color: #000;
-    width: 29px;
+    width: 32px;
 }
 
 table.lineup td:nth-child(1){
-    width: 205px;
+    width: 195px;
     padding: 0 2px;
     text-align: left;
 }

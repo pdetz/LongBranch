@@ -7,6 +7,7 @@ function meetBuilder(season){
     //builder.append(newEventButton(meet.events));
     meet.events.forEach(event =>{
         builder.append(event.editor);//.append(newEventButton(meet.events));
+        event.updateHeats();
     });
     loadTimerSheets(meet, builder);
 
@@ -24,7 +25,7 @@ function loadTimerSheets(meet, timerSheets){
         meet.events.forEach(event=>{
             let e = make("div.timers.event").html(event.titleLine.html());
             event.heats.forEach(heat=>{
-                let h = make("div.timers.heat");
+                let h = heat.timerLines[lane];
                 let name = make("span.timers.name")
                             .append(NO_SWIMMER.nicknames());
                             //.append(event.heatLane(heat.n-1, lane).swimmer.nicknames());
@@ -111,10 +112,12 @@ function swap(lane1, lane2){
     let entry1 = lane1.entry;
     let entry2 = lane2.entry;
 
+    console.log(lane1, lane2);
+
     let swimmer1 = lane1.swimmer;
     let swimmer2 = lane2.swimmer;
 
-    console.log(swimmer1.nombre, swimmer2.nombre);
+    //console.log(swimmer1.nombre, swimmer2.nombre);
 
     if (entry1 !== "" && entry2 !== ""){
         entry1.button.data("entry", entry2);
@@ -124,22 +127,32 @@ function swap(lane1, lane2){
         entry1.button = entry2.button;
         entry2.button = holdButton;
         
-        //lane1.entry = entry2;
-        //lane2.entry = entry1;
-
-        lane1.swimmer = swimmer2;
-        lane2.swimmer = swimmer1;
-        
         entry1.button.data("entry").swimmer = swimmer2;
         entry2.button.data("entry").swimmer = swimmer1;
 
-        entry1.button.html("h" + entry1.button.data("entry").heat + "l" + entry1.button.data("entry").lane);
-        entry2.button.html("h" + entry2.button.data("entry").heat + "l" + entry2.button.data("entry").lane);
-        entry1.button.html(entry1.button.data("entry").swimmer.nombre);
-        entry2.button.html(entry2.button.data("entry").swimmer.nombre);
+        entry1.EHL();  
+        entry2.EHL();  
+
     }
-    if (entry1 == ""){
-        
+    else if (entry1 === "" && entry2 !== ""){
+        entry2.lane = lane1.n - 1;
+        entry2.heat = lane1.heat.n - 1;
+        entry2.EHL(); 
+        console.log(entry2);
+        lane1.entry = entry2;
+        lane2.entry = "";
+        //entry1.button.data("entry").swimmer = swimmer2;
+        //entry2.button.data("entry").swimmer = swimmer1;
+    }
+    else if (entry2 === "" && entry1 !== ""){
+        entry1.lane = lane2.n - 1;
+        entry1.heat = lane2.heat.n - 1;
+        entry1.EHL();  
+        console.log(entry1);
+        lane2.entry = entry1;
+        lane1.entry = "";
+        //entry1.button.data("entry").swimmer = swimmer2;
+        //entry2.button.data("entry").swimmer = swimmer1;
     }
 
     //lane1.swimmer = lane2Swimmer;
@@ -147,11 +160,17 @@ function swap(lane1, lane2){
     
     lane1.seedLane(swimmer2);
     lane2.seedLane(swimmer1);
+    
+    //entry1.button.html(1);
+    //entry2.button.html(2);
 }
 
 Heat.prototype.heatEditor = function(event){
     let heat = this;
-    let editor = make("div.heat").append("Heat ", this.n, " of ", event.heats.length + 1, '<br>');
+    let heatButton = make("button.heat").append("Heat ", this.n, " of ");
+    this.ofN.html(event.heats.length + 1);
+    heatButton.append(this.ofN).data("heat", this).data("event", event);
+    let editor = make("div.heat").append(heatButton);
     for (l = 0; l < 6; l++){
         editor.append(heat.lanes[l].lane);
     };
@@ -243,14 +262,40 @@ ISEvent.prototype.updateTitle = function(){
     this.titleLine.html("Event ").append(eventNumber, ". ", this.ageGroup.name, " ", this.distance, " ", this.stroke.name);
 }
 
+ISEvent.prototype.removeHeat = function(heat){
+    let index = this.heats.indexOf(heat);
+    this.heats.splice(index, 1);
+    heat.editor.remove();
+    for (let l = 0; l < 6; l++){
+        heat.timerLines[l].remove();
+    }
+}
+
+ISEvent.prototype.updateHeats = function(){
+    this.heats.forEach(heat =>{
+        heat.ofN.html(this.heats.length);
+    });
+}
 
 function Heat(event){
     this.n = event.heats.length + 1;
     this.lanes = [];
+    this.ofN = make("span");
     for (let i = 0; i < 6; i++){
         this.lanes.push(new Lane(event, this, NO_SWIMMER, i));
     }
     this.editor = this.heatEditor(event);
+    this.timerLines = [];
+    for (let l = 0; l < 6; l++){
+        this.timerLines.push(make("div.timers.heat"));
+    }
 }
 
-
+Heat.prototype.swimmers = function(){
+    let swimmers = 6;
+    this.lanes.forEach(lane => {
+        if (lane.swimmer === NO_SWIMMER) swimmers--;
+    });
+    console.log(swimmers);
+    return swimmers;
+}
