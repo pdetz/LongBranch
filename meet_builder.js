@@ -12,7 +12,19 @@ function meetBuilder(season){
     loadTimerSheets(meet, builder);
 
     meet.meet.entries.forEach(entry =>{
-        entry.button.html(meet.events[entry.n-1].distance.slice(0, -1));
+        let event = meet.events[entry.n - 1];
+        let heat = event.heats[entry.heat];
+        let lane = heat.lanes[entry.lane];
+        entry.heatLane = lane;
+        lane.seedLane(entry.swimmer);
+        lane.entry = entry;
+        
+        entry.EHL();
+        entry.button.addClass("entry");
+        console.log(entry);
+        //lane.seedLane(entry.swimmer);
+
+        //entry.button.html(meet.events[entry.n-1].distance.slice(0, -1));
         //meet.seedEntry(entry, meet.events[entry.n-1]);
     });
     return builder;
